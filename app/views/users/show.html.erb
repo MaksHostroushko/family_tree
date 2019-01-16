@@ -1,0 +1,10 @@
+<div class="show_user">
+  <h2><%= @user.first_name %><h2>
+  First name: <%= @user.last_name %>
+  <br>
+  <% if @user.maiden_name.present? %>
+    Maiden name: <%= @user.maiden_name %>
+    <br>
+  <% end %>
+  About self: <%= @user.description %>
+</div>
