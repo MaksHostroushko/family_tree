@@ -1,5 +1,7 @@
 <div class="show_user">
   <h2><%= @user.first_name %><h2>
+    <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
+    <br>
   First name: <%= @user.last_name %>
   <br>
   <% if @user.maiden_name.present? %>

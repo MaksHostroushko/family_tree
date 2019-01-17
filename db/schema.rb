@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_01_16_152934) do
     t.string "last_name"
     t.string "maiden_name"
     t.text "description"
-    t.string "picture"
+    t.string "image"
     t.boolean "published"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

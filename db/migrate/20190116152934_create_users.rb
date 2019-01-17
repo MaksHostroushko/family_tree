@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :maiden_name
       t.text :description
-      t.string :picture
+      t.string :image
       t.boolean :published
 
       t.timestamps
