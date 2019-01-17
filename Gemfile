@@ -8,6 +8,8 @@ gem 'will_paginate', '3.1.6'
 gem 'jquery-rails'
 gem 'carrierwave', '1.2.2'
 gem 'jquery-ui-rails'
+gem 'devise'
+gem 'activeadmin'
 # gem 'trix-rails', require: 'trix'
 gem 'bootstrap-will_paginate', '1.0.0'
 # gem "font-awesome-rails"
