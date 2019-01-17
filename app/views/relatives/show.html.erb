@@ -1,0 +1,14 @@
+<div class="show_relative">
+  <h2><%= @relative.first_name %><h2>
+    <%= image_tag(@relative.image_url, alt: 'Image') if @relative.image? %>
+    <br>
+  First name: <%= @relative.second_name %>
+  <br>
+  First name: <%= @relative.born %>
+  <br>
+  <% if @relative.maiden_name.present? %>
+    Maiden name: <%= @relative.maiden_name %>
+    <br>
+  <% end %>
+  About self: <%= @relative.description %>
+</div>
