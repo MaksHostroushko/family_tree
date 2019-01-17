@@ -1,32 +1,3 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.card {
-  margin-left: 20px;
-}
-
-.product {
-  margin-left: -30px;
-}
-
-.products {
-  text-align: center;
-  margin-top: 20px;
-  &:nth-child(1){
-    margin-top: -20px;
-  }
-  &:nth-child(2){
-    margin-top: -20px;
-  }
-  &:nth-child(3) {
-    margin-top: -20px;
-  }
-}
-
-.users_main {
-  max-width: 100%;
-}
-
-.show_user {
-  text-align: center;
-}
