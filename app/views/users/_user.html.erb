@@ -1,8 +1,9 @@
 <div class="product-card text-center products" style="width: 20rem">
   <div class="card-body">
-    <h5>Name</h5> <h2><%= user.first_name %></h2>
-    <h5>Second name</h5> <h2><%= user.last_name %></h2>
-    <h5>Description</h5> <h2><%= user.description.truncate(15) %></h2>
+    <h2><%= user.first_name %></h2>
+    <%= link_to(image_tag(user.image.small.url, alt: 'Image'), user_path(user)) if user.image.present? %>
+    <h2><%= user.last_name %></h2>
+    <h2><%= user.description.truncate(15) %></h2>
   </div>
   <%= link_to 'show', user_path(user), class: 'btn btn-success btn-sm' %>
   <%= link_to 'edit', edit_user_path(user), class: 'btn btn-warning btn-sm' %>
