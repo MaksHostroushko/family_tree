@@ -1,11 +1,13 @@
 <!-- <div class="col-md-2"> -->
 <!-- </div> -->
-
-<div class="users_main col-md-10 row">
-    <% if @relatives.present? %>
-      <%= render @relatives %>
-    <% else %>
-      <h2 class="col-10 text-center"><b>No people</b></h2>
-    <% end %>
+<% if logged_in? %>
+  <div class="users_main col-md-10 row">
+      <% if @relatives.present? %>
+        <%= render @relatives %>
+      <% else %>
+        <h2 class="col-10 text-center"><b>No people</b></h2>
+      <% end %>
   </div>
-</div>
+<% else %>
+  <%= render 'sessions/login' %>
+<% end %>

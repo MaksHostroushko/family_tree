@@ -3,6 +3,7 @@ class RelativesController < ApplicationController
 
   def index
     @relatives = Relative.all
+    @user = current_user
   end
 
   def new
