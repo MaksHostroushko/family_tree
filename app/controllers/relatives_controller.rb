@@ -1,4 +1,5 @@
 class RelativesController < ApplicationController
+  before_action: find_relative, only: [:show, :edit, :update, :destroy]
 
   def index
     @relatives = Relative.all
@@ -19,16 +20,11 @@ class RelativesController < ApplicationController
     end
   end
 
-  def show
-    @relative = Relative.find(params[:id])
-  end
+  def show; end
 
-  def edit
-    @relative = Relative.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @relative = Relative.find(params[:id])
     if @relative.update_attributes(relative_params)
       flash[:success] = "relative information update"
       redirect_to @relative
@@ -38,7 +34,6 @@ class RelativesController < ApplicationController
   end
 
   def destroy
-    @relative = Relative.find(params[:id])
     @relative.destroy
     flash[:success] = "relative removed"
     redirect_to root_url
@@ -48,5 +43,9 @@ private
 
   def relative_params
     params.require(:relative).permit(:first_name, :second_name, :maiden_name, :description, :image, :published, :born)
+  end
+
+  def find_relative
+    @relative = Relative.find(params[:id])
   end
 end
