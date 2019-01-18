@@ -1,5 +1,5 @@
 class RelativesController < ApplicationController
-  before_action: find_relative, only: [:show, :edit, :update, :destroy]
+  before_action :find_relative, only: [:show, :edit, :update, :destroy]
 
   def index
     @relatives = Relative.all
@@ -12,8 +12,8 @@ class RelativesController < ApplicationController
   def create
     @relative = Relative.new(relative_params)
     if @relative.save
-      redirect_to @relative
-      flash[:success] = "relative create"
+      redirect_to root_url
+      flash[:success] = "Relative create.Admin check your relative"
     else
       redirect_to root_url
       flash[:danger] = "Sorry,problem"

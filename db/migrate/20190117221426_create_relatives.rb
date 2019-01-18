@@ -7,7 +7,7 @@ class CreateRelatives < ActiveRecord::Migration[5.2]
       t.string :born
       t.text :description
       t.string :image
-      t.boolean :published
+      t.boolean :published, default: false
 
       t.timestamps
     end

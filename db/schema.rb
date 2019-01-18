@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_234652) do
     t.string "born"
     t.text "description"
     t.string "image"
-    t.boolean "published"
+    t.boolean "published", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
