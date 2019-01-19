@@ -1,15 +1,26 @@
   <nav class="navbar navbar-light bg-light">
+    <div class="col-md-10 row">
     <%= link_to (image_tag "tree.jpg", class: 'tree_img'), root_path %>
     <% if logged_in? %>
-    <!-- <div class="col-md-10"> -->
-      <%= link_to "All users", root_path, class: 'navbar_link'%>
-      <%= link_to "New user", new_relative_path(@user), class: 'navbar_link' %>
+      <%= link_to "All relatives", root_path, class: 'navbar_link'%>
+      <%= link_to "New relative", new_relative_path(@user), class: 'navbar_link' %>
+
+      <%= form_tag relatives_path, method: :get, class: "form-inline my-2 my-lg-0 search_form" do %>
+      <%= text_field_tag(
+  :search,
+  params[:search],
+  placeholder: "Search",
+  class: "form-control mr-sm-2", id: "search"
+  ) %>
+  <%= submit_tag "Search", class: 'btn btn-outline-success my-2 my-sm-0' %>
+  <% end %>
+  </div>
+    <div class="col-md-2">
+      <%#= link_to(image_tag(@user.image.mini.url, alt: "Img"), user_path(@user)) %>
+    <%#= link_to @user.name, user_path(@user) %>
       <%= link_to "Log out", logout_path, method: :delete, class: 'navbar_log_out' %>
-    <!-- </div> -->
-    <!-- <div class="col-md-2"> -->
-      <%#= link_to (image_tag(@user.image_url(:mini), alt: 'Image') if @user.image?), user_path(@user) %>  <%#= @user.name %>
-    <!-- </div> -->
     <% elsif signup_path %>
       <%= link_to "Log in", login_path %>
     <% end %>
+  </div>
   </nav>

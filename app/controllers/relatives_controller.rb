@@ -3,7 +3,20 @@ class RelativesController < ApplicationController
 
   def index
     @relatives = Relative.all
-    @user = current_user
+    # @user = current_user
+    # @user = User.find(params[:id])
+
+    if params[:search]
+      @relatives = Relative.search(params[:search]).order(created_at: :asc)
+    else
+      @relatives = Relative.all.order(created_at: :asc)
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+      format.json { render json: @relatives.pluck(:second_name) }
+    end
   end
 
   def new
