@@ -1,10 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to (image_tag "tree.jpg", class: 'tree_img'), root_path %>
-  <% if logged_in? %>
-    <%= link_to "All users", root_path, class: 'navbar_link'%>
-    <%= link_to "New user", new_relative_path(@user), class: 'navbar_link' %>
-    <%= link_to "Log out", logout_path, method: :delete, class: 'navbar_log_out' %>
-  <% elsif signup_path %>
-    <%= link_to "Log in", login_path %>
-  <% end %>
+  <nav class="navbar navbar-light bg-light">
+    <%= link_to (image_tag "tree.jpg", class: 'tree_img'), root_path %>
+    <% if logged_in? %>
+    <!-- <div class="col-md-10"> -->
+      <%= link_to "All users", root_path, class: 'navbar_link'%>
+      <%= link_to "New user", new_relative_path(@user), class: 'navbar_link' %>
+      <%= link_to "Log out", logout_path, method: :delete, class: 'navbar_log_out' %>
+    <!-- </div> -->
+    <!-- <div class="col-md-2"> -->
+      <%#= link_to (image_tag(@user.image_url(:mini), alt: 'Image') if @user.image?), user_path(@user) %>  <%#= @user.name %>
+    <!-- </div> -->
+    <% elsif signup_path %>
+      <%= link_to "Log in", login_path %>
+    <% end %>
   </nav>
