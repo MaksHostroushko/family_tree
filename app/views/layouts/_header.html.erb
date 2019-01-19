@@ -4,7 +4,7 @@
     <%= link_to "All users", root_path, class: 'navbar_link'%>
     <%= link_to "New user", new_relative_path(@user), class: 'navbar_link' %>
     <%= link_to "Log out", logout_path, method: :delete, class: 'navbar_log_out' %>
-  <%# else %>
-    <%#= link_to "Log in", login_path %>
-    <% end %>
+  <% elsif signup_path %>
+    <%= link_to "Log in", login_path %>
+  <% end %>
   </nav>
