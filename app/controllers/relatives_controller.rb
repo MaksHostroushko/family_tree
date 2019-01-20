@@ -3,14 +3,11 @@ class RelativesController < ApplicationController
 
   def index
     @relatives = Relative.all
-    # @user = current_user
+    @user = current_user
     # @user = User.find(params[:id])
 
-    if params[:search]
-      @relatives = Relative.search(params[:search]).order(created_at: :asc)
-    else
-      @relatives = Relative.all.order(created_at: :asc)
-    end
+    @relatives = Relative.search(params[:search]).order(created_at: :asc)  if params[:search]
+
 
     respond_to do |format|
       format.html
@@ -21,10 +18,12 @@ class RelativesController < ApplicationController
 
   def new
     @relative = Relative.new
+    @user = current_user
   end
 
   def create
     @relative = Relative.new(relative_params)
+    @user = current_user
     if @relative.save
       redirect_to root_url
       flash[:success] = "Relative create.Admin check your relative"
