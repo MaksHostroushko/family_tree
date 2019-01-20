@@ -19,8 +19,8 @@
       <%= link_to(image_tag(@user.image.mini.url, alt: "Img"), user_path(@user)) %>
       <%= link_to @user.name, user_path(@user) %>
       <%= link_to "Log out", logout_path, method: :delete, class: 'navbar_log_out' %>
+    </div>
     <% elsif signup_path %>
-      <%= link_to "Log in", login_path %>
+      <%= link_to "Log in", login_path, class: 'navbar_link' %>
     <% end %>
-  </div>
   </nav>

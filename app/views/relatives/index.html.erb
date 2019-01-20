@@ -1,8 +1,8 @@
-<div class="row">
-  <div class="col-md-2">
-    <%= render 'categories' %>
-  </div>
-  <% if logged_in? %>
+<% if logged_in? %>
+  <div class="row">
+    <div class="col-md-2">
+      <%= render 'categories' %>
+    </div>
     <div class="users_main col-md-10 row">
         <% if @relatives.present? %>
           <%= render @relatives %>
@@ -10,7 +10,7 @@
           <h2 class="col-10 text-center"><b>No people</b></h2>
         <% end %>
     </div>
-  <% else %>
-    <%= render 'sessions/login' %>
-  <% end %>
-</div>
+  </div>
+<% else %>
+  <%= render 'sessions/login' %>
+<% end %>
