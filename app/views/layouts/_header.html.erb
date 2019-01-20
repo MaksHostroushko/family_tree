@@ -1,5 +1,5 @@
   <nav class="navbar navbar-light bg-light">
-    <div class="col-md-10 row">
+    <div class="col-md-9 row">
     <%= link_to (image_tag "tree.jpg", class: 'tree_img'), root_path %>
     <% if logged_in? %>
       <%= link_to "All relatives", root_path, class: 'navbar_link'%>
@@ -15,10 +15,20 @@
   <%= submit_tag "Search", class: 'btn btn-outline-success my-2 my-sm-0' %>
   <% end %>
   </div>
-    <div class="col-md-2">
-      <%= link_to(image_tag(@user.image.mini.url, alt: "Img"), user_path(@user)) %>
-      <%= link_to @user.name, user_path(@user) %>
-      <%= link_to "Log out", logout_path, method: :delete, class: 'navbar_log_out' %>
+    <div class="col-md-3 row">
+        <%= link_to(image_tag(@user.image.mini.url, alt: "Img", class: "mini_image"), user_path(@user)) if @user.image.url.present? %>
+      <div class="dropdown">
+        <button class="btn btn_dropdown btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= @user.name.truncate(8) %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to "Profile", current_user, class: "dropdown-item" %>
+        <!-- <hr> -->
+          <%= link_to "Settings", edit_user_path(current_user), class: "dropdown-item" %>
+        <!-- <hr> -->
+          <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item" %>
+        </div>
+      </div>
     </div>
     <% elsif signup_path %>
       <%= link_to "Log in", login_path, class: 'navbar_link' %>

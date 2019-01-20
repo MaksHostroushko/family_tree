@@ -1,3 +1,12 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn_dropdown {
+  height: 3em;
+  // margin-right: 2em;
+  position: relative;
+  right: -190%;
+}
+
+.mini_image {
+  // margin-left: 4em;
+  position: absolute;
+  right: 51%;
+}

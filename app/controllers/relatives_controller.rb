@@ -34,9 +34,13 @@ class RelativesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @user = current_user
+  end
 
-  def edit; end
+  def edit
+    @user = current_user
+  end
 
   def update
     if @relative.update_attributes(relative_params)
