@@ -2,7 +2,9 @@ class RelativesController < ApplicationController
   before_action :find_relative, only: [:show, :edit, :update, :destroy]
 
   def index
+    @categories = Category.all
     @relatives = Relative.all
+    @relatives = @relatives.where(id: CategoryRelative.where(category_id: params[:filter]).pluck(:relative_id)) if params[:filter].present?
     @user = current_user
     # @user = User.find(params[:id])
 

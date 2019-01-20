@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_19_171357) do
+ActiveRecord::Schema.define(version: 2019_01_20_190128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,21 @@ ActiveRecord::Schema.define(version: 2019_01_19_171357) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_relatives", force: :cascade do |t|
+    t.bigint "relative_id"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_category_relatives_on_category_id"
+    t.index ["relative_id"], name: "index_category_relatives_on_relative_id"
+  end
+
   create_table "relatives", force: :cascade do |t|
     t.string "first_name"
     t.string "second_name"
@@ -63,4 +78,6 @@ ActiveRecord::Schema.define(version: 2019_01_19_171357) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "category_relatives", "categories"
+  add_foreign_key "category_relatives", "relatives"
 end
