@@ -8,7 +8,6 @@ class RelativesController < ApplicationController
 
     @relatives = Relative.search(params[:search]).order(created_at: :asc)  if params[:search]
 
-
     respond_to do |format|
       format.html
       format.js
@@ -28,8 +27,8 @@ class RelativesController < ApplicationController
       redirect_to root_url
       flash[:success] = "Relative create.Admin check your relative"
     else
-      redirect_to root_url
-      flash[:danger] = "Sorry,problem"
+      render 'new'
+      # flash[:danger] = "Sorry,problem"
     end
   end
 
