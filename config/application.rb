@@ -8,10 +8,10 @@ module FamilyTree
   class Application < Rails::Application
     config.load_defaults 5.2
 
-
-    config.time_zone = 'Kyiv'
-    config.i18n.available_locales = [:ua, :en]
-    config.i18n.default_locale = :ua
+    # 
+    # config.time_zone = 'Kyiv'
+    # config.i18n.available_locales = [:ua, :en]
+    # config.i18n.default_locale = :ua
 
   end
 end
