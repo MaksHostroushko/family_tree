@@ -17,5 +17,6 @@
 //= require jquery-ui
 //= require bootstrap
 //= require turbolinks
+//= require trix
 //= require flash
 //= require search
