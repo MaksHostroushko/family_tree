@@ -18,7 +18,7 @@
     <div class="col-md-3 row">
         <%= link_to(image_tag(@user.image.mini.url, alt: "Img", class: "mini_image"), user_path(@user)) if @user.image.url.present? %>
       <div class="dropdown">
-        <button class="btn btn_dropdown btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn_dropdown btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= @user.name.truncate(8) %>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
