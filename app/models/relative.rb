@@ -9,7 +9,7 @@ class Relative < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   def self.search(search)
-    where("second_name ILIKE ?", "%#{search}%")
+    where("first_name LIKE ?", "%#{search}%")
   end
 
 end
