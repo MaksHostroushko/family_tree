@@ -14,10 +14,10 @@ gem 'trix-rails', require: 'trix'
 gem 'bootstrap-will_paginate', '1.0.0'
 # gem "font-awesome-rails"
 # gem 'lightbox2-rails'
-# gem 'activeadmin'
-# gem 'devise'
+gem 'activeadmin'
+gem 'devise'
 gem 'letter_opener_web', '~> 1.0'
-# gem 'sendgrid-ruby'
+gem 'sendgrid-ruby'
 # gem 'rails-i18n'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
