@@ -7,8 +7,8 @@ class RelativesController < ApplicationController
     @relatives = @relatives.where(id: CategoryRelative.where(category_id: params[:filter]).pluck(:relative_id)) if params[:filter].present?
     @user = current_user
     # @user = User.find(params[:id])
-
     @relatives = Relative.search(params[:search]).order(created_at: :asc)  if params[:search]
+    @relatives = Relative.paginate(page: params[:page], per_page: 9)
 
     respond_to do |format|
       format.html
