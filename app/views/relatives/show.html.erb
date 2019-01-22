@@ -1,17 +1,16 @@
 <div class="show_relative">
-  <h2><%= @relative.first_name %><h2>
     <%= image_tag(@relative.image_url(:thumb), alt: 'Image') if @relative.image? %>
     <br>
     <% if @relative.maiden_name.present? %>
-      <%= @relative.second_name %>(<%= @relative.maiden_name %>)
+      <h2><%= @relative.first_name %> <%= @relative.second_name %>(<%= @relative.maiden_name %>)<h2>
     <% else %>
-      <%= @relative.second_name %>
+    <h2><%= @relative.first_name %> <%= @relative.second_name %></h2>
     <% end %>
-  <br>
-  <%= @relative.born %>
-  <br>
-  <%= @relative.family_status %>
-  <br>
-  <%= @relative.children if @relative.children.present? %>
-  <%= sanitize @relative.description %>
+  <!-- <br> -->
+  <h2><%= @relative.born %></h2>
+  <!-- <br> -->
+  <h2><%= @relative.family_status %></h2>
+  <!-- <br> -->
+  <h2><%= @relative.children if @relative.children.present? %></h2>
+  <h2><%= sanitize @relative.description %></h2>
 </div>
