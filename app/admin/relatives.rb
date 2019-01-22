@@ -6,7 +6,7 @@ ActiveAdmin.register Relative do
         input :first_name
         input :second_name
         input :maiden_name
-        input :description
+        input :description, as: :html_editor
         input :born
         input :published
         input :categories, as: :check_boxes, collection: Category.all.map { |c| [c.name, c.id] }

@@ -20,6 +20,8 @@ gem 'letter_opener_web', '~> 1.0'
 gem 'sendgrid-ruby'
 # gem 'rails-i18n
 gem 'ransack'
+# gem 'active_admin_editor'
+gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
