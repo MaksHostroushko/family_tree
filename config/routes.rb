@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   # get 'user/:id', to: 'users#show', as: 'user'
 
   resources :users
-  resources :relatives
+  resources :relatives do
+    resources :categories
+  end
 end

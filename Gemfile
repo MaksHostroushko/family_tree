@@ -18,7 +18,8 @@ gem 'activeadmin'
 gem 'devise'
 gem 'letter_opener_web', '~> 1.0'
 gem 'sendgrid-ruby'
-# gem 'rails-i18n'
+# gem 'rails-i18n
+gem 'ransack'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'

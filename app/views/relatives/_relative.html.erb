@@ -10,7 +10,7 @@
       <% else %>
         <h2><%= relative.second_name %></h2>
       <% end %>
-      <h2><%= sanitize relative.description.truncate(15) %></h2>
+      <h2><%#= sanitize relative.description.truncate(15) %></h2>
     </div>
     <%#= link_to 'show', relative_path(relative), class: 'btn btn-success btn-sm' %>
     <%#= link_to 'edit', edit_relative_path(relative), class: 'btn btn-warning btn-sm' %>

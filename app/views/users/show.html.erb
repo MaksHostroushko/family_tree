@@ -2,7 +2,7 @@
 
 <div class="text-center">
   <h1><%= @user.name %></h1>
-  <%= image_tag(@user.image_url, alt: 'Image') if @user.image? %>
+  <%= image_tag(@user.image_url, alt: 'Image', class: 'img_show_user') if @user.image? %>
   <%#= image_tag(@user.image.small.url, alt: 'Image') %>
   <br>
   <h1><%= @user.email %></h1>
