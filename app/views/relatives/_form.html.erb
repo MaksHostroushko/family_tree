@@ -22,6 +22,16 @@
 </div>
 
 <div class="form-group">
+  <%= f.label :family_status %>
+  <%= f.text_field :family_status, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :children %>
+  <%= f.text_field :children, class: 'form-control' %>
+</div>
+
+<div class="form-group">
   <%= f.label :description %>
   <%= f.trix_editor :description, class: 'trix_editor' %>
 </div>

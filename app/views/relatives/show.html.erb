@@ -1,6 +1,6 @@
 <div class="show_relative">
   <h2><%= @relative.first_name %><h2>
-    <%= image_tag(@relative.image_url, alt: 'Image') if @relative.image? %>
+    <%= image_tag(@relative.image_url(:thumb), alt: 'Image') if @relative.image? %>
     <br>
     <% if @relative.maiden_name.present? %>
       <%= @relative.second_name %>(<%= @relative.maiden_name %>)
@@ -10,5 +10,8 @@
   <br>
   <%= @relative.born %>
   <br>
+  <%= @relative.family_status %>
+  <br>
+  <%= @relative.children if @relative.children.present? %>
   <%= sanitize @relative.description %>
 </div>

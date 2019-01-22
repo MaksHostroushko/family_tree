@@ -1,5 +1,5 @@
 ActiveAdmin.register Relative do
-  permit_params :relative, :of, :first_name, :second_name, :maiden_name, :description, :born, :image, :published, category_ids: []
+  permit_params :relative, :of, :first_name, :second_name, :maiden_name, :description, :born, :family_status, :children, :image, :published, category_ids: []
   #
   form title: 'A custom title' do |f|
       inputs 'Details' do
@@ -8,6 +8,8 @@ ActiveAdmin.register Relative do
         input :maiden_name
         input :description, as: :html_editor
         input :born
+        input :family_status
+        input :children
         input :published
         input :categories, as: :check_boxes, collection: Category.all.map { |c| [c.name, c.id] }
         input :image, as: :file#, input_html: { multiple: true }
@@ -22,6 +24,8 @@ ActiveAdmin.register Relative do
       column :maiden_name
       column :description
       column :born
+      column :family_status
+      column :children
       column :published
       column :created_at
       column :updated_at
@@ -35,6 +39,8 @@ ActiveAdmin.register Relative do
         row :maiden_name
         row :description
         row :born
+        row :family_status
+        row :children
         row :published
         row :categories do |relative|
           div do
