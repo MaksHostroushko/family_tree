@@ -3,7 +3,8 @@
     <div class="card-body">
       <h2><%= link_to relative.first_name, relative_path(relative), class: 'Link_show_relative' %></h2>
       <%#= link_to(image_tag(relative.image.small.url, alt: 'Image'), relative_path(relative)) if relative.image.present? %>
-      <%= link_to(image_tag(relative.image.small.url, alt: 'Image'), relative_path(relative)) if relative.image.present? %>
+      <%#= link_to(image_tag(relative.image.small.url, alt: 'Image'), relative_path(relative)) if relative.image.present? %>
+      <%= link_to (image_tag relative.images[0].url(:small) if relative.images.present?), relative_path(relative) %>
       <%# image_tag(relative.image_url, alt: 'Image') if relative.image? %>
       <% if relative.maiden_name.present? %>
         <h2><%= relative.second_name %>(<%= relative.maiden_name %>)</h2>

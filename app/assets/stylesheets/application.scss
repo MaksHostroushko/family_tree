@@ -13,6 +13,7 @@
  *= require trix
  *= require jquery-ui
  *= require_self
+ *= require lightbox
  *= require custom
  *= require relatives
  *= require sessions
@@ -21,3 +22,4 @@
  *= require active_admin/editor/wysiwyg
  */
  @import "bootstrap";
+ @import 'lightbox';

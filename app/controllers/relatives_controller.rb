@@ -61,7 +61,7 @@ class RelativesController < ApplicationController
 private
 
   def relative_params
-    params.require(:relative).permit(:first_name, :second_name, :maiden_name, :description, :image, :published, :born, :family_status, :children)
+    params.require(:relative).permit(:first_name, :second_name, :maiden_name, :description, :published, :born, :family_status, :children, {images: []})
   end
 
   def find_relative

@@ -14,7 +14,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  version :big do
+  version :large do
     process resize_to_fill: [500, 500]
   end
 
@@ -33,8 +33,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :small_thumb, from_version: :thumb do
     process resize_to_fill: [20, 20]
   end
-
-
 
   def extension_whitelist
     %w(jpg jpeg gif png)

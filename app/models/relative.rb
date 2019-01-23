@@ -6,7 +6,7 @@ class Relative < ApplicationRecord
   validates :second_name, presence: true, length:  { maximum: 40, minimum: 3 }
   validates :born, presence: true, length:  { maximum: 25, minimum: 9 }
 
-  mount_uploader :image, ImageUploader
+  mount_uploaders :images, ImageUploader
 
   def self.search(search)
     where("first_name LIKE ?", "%#{search}%")
