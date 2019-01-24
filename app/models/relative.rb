@@ -1,5 +1,5 @@
 class Relative < ApplicationRecord
-  has_many :category_relatives
+  has_many :category_relatives, dependent: :nullify
   has_many :categories, through: :category_relatives
 
   validates :first_name, presence: true, length:  { maximum: 20, minimum: 3 }

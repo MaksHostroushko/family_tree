@@ -1,4 +1,4 @@
 class CategoryRelative < ApplicationRecord
-  belongs_to :relative, dependent: :destroy
-  belongs_to :category, dependent: :destroy
+  belongs_to :relative
+  belongs_to :category
 end
