@@ -36,12 +36,17 @@
   <%= f.trix_editor :description, class: 'trix_editor' %>
 </div>
 
-<%# f.file_field :picture %>
 <div class="img-field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
+  <%= f.label :images %>
+  <%= f.file_field :images, multiple: true %>
 </div>
-<br>
+
+<div class="form-group">
+  <%= collection_check_boxes(:relative, :category_ids, Category.all, :id, :name) do |b| %>
+  <%=  b.label(:"data-value" => b.value) { b.check_box + b.text } %>
+  <% end %>
+</div>
+
 <div class="btn-form">
   <%= f.submit class: 'btn btn-success' %>
 </div>
