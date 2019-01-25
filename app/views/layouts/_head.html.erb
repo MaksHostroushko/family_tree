@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to (image_tag "tree.jpg", class: 'tree_img'), root_path %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <!-- <div class="col-md-9 row"> -->
+          <% if logged_in? %>
+            <%= link_to "All relatives", root_path, class: 'navbar_link'%>
+            <%= link_to "New relative", new_relative_path(@user), class: 'navbar_link' %>
+          </li>
+            <%= form_tag relatives_path, method: :get, class: "form-inline my-2 my-lg-0 search_form" do %>
+            <%= text_field_tag(
+            :search,
+            params[:search],
+            placeholder: "Search",
+            class: "form-control mr-sm-2", id: "search"
+            ) %>
+            <%= button_tag(type: "submit", class: "search") do %>
+              <%= fa_icon "search lg" %>
+            <% end %>
+            <% end %>
+      <!-- </div> -->
+    </ul>
+
+    <span class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= @user.name %>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to "Profile", current_user, class: "dropdown-item" %>
+        <hr>
+        <%= link_to "Settings", edit_user_path(current_user), class: "dropdown-item" %>
+        <hr>
+        <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item" %>
+      </div>
+    </span>
+    <%= link_to(image_tag(@user.image.mini.url, alt: "Img", class: "mini_image"), user_path(@user)) if @user.image.url.present? %>
+    <% elsif signup_path %>
+    <%= link_to "Log in", login_path, class: 'navbar_link' %>
+    <% end %>
+  </div>
+</nav>

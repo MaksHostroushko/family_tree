@@ -12,7 +12,7 @@ gem 'devise'
 gem 'activeadmin'
 gem 'trix-rails', require: 'trix'
 gem 'bootstrap-will_paginate', '1.0.0'
-# gem "font-awesome-rails"
+gem "font-awesome-rails"
 gem 'lightbox2-rails'
 gem 'activeadmin'
 gem 'devise'

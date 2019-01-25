@@ -9,10 +9,12 @@
     <h2><%= @relative.first_name %> <%= @relative.second_name %></h2>
     <% end %>
   <!-- <br> -->
-  <h2><%= @relative.born %></h2>
+  <h4><%= @relative.born %></h2>
   <!-- <br> -->
-  <h2><%= @relative.family_status %></h2>
+  <h4><%= @relative.family_status %></h2>
   <!-- <br> -->
-  <h2><%= @relative.children if @relative.children.present? %></h2>
-  <h2><%= sanitize @relative.description %></h2>
+  <h4><%= @relative.children if @relative.children.present? %></h2>
+  <div class="show_description">
+    <h5><%= sanitize @relative.description %></h5>
+  </div>
 </div>

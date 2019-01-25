@@ -14,6 +14,7 @@
  *= require jquery-ui
  *= require_self
  *= require lightbox
+ *= require font-awesome
  *= require custom
  *= require relatives
  *= require sessions
@@ -23,3 +24,4 @@
  */
  @import "bootstrap";
  @import 'lightbox';
+ @import "font-awesome";

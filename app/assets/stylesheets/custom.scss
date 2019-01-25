@@ -98,6 +98,14 @@ ul.pagination {
     color: #C0C0C0;
 }
 
+.search {
+  background-color: #F8F8F8;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+  }
+}
 // ul.pagination {
 //   margin-right: auto;
 //   margin-left: auto;
