@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    attributes:
+      relative:
+        first_name: 'First_name'
+        second_name: 'Second_name'
+        maiden_name: 'Maiden_name'
+        born: 'Born'
+        description: 'Description'
+        image: 'Image'
+        family_status: 'Family_status'
+        children: 'Children'
+      user:
+        name: 'Name'
+        email: 'Email'
+        image: 'Image'
+        password: 'Password'
+        confirmation: 'Confirmation'

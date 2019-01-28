@@ -1,0 +1,18 @@
+ua:
+  activerecord:
+    attributes:
+      relative:
+        first_name: "Ім'я"
+        second_name: 'Прізвище'
+        maiden_name: 'Дівоче прізвище'
+        born: 'Дата народження'
+        description: 'Опис'
+        images: 'Зображення'
+        family_status: 'Сімейний статус'
+        children: 'Діти'
+      user:
+        name: "Ім'я"
+        email: 'Пошта'
+        image: 'Зображення'
+        password: 'Пароль'
+        confirmation: 'Підтвердження'
