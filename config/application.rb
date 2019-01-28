@@ -9,8 +9,8 @@ module FamilyTree
     config.load_defaults 5.2
 
     config.time_zone = 'Kyiv'
-    config.i18n.available_locales = [:uk, :en]
-    config.i18n.default_locale = :uk
+    config.i18n.available_locales = [:ua, :en]
+    config.i18n.default_locale = :ua
 
   end
 end

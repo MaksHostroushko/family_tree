@@ -1,0 +1,19 @@
+ua:
+  layouts:
+    navbar:
+      all_rel: 'Усі родичі'
+      new_rel: 'Новий родич'
+      search: 'Пошук'
+      profile: 'Профіль'
+      settings: 'Налаштування'
+      logout: 'Вихід'
+      login: 'Вхід'
+  relatives:
+    categories:
+      find: 'Пошук'
+    form:
+      submit: 'Готово'  
+  users:
+    edit:
+      edit: 'Редагування'
+      save: 'Зберегти зміни'
