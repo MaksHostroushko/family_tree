@@ -15,4 +15,19 @@ ua:
         email: 'Пошта'
         image: 'Зображення'
         password: 'Пароль'
-        confirmation: 'Підтвердження'
+        password_confirmation: 'Підтвердження'
+
+    #Controllers
+  relatives:
+    create:
+      save: 'Cтворено.Після перевірки адміна стаття буде опублікована'
+    update:
+      edit: 'Інформацію оновлено'
+    destroy:
+      remove: 'Успішно видалено'
+  users:
+    update:
+      edit: 'Профіль оновлено'
+  sessions:
+    create:
+      error: 'Недійсна комбінація електронної пошти / пароля'

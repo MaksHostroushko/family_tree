@@ -28,7 +28,7 @@ class RelativesController < ApplicationController
     @user = current_user
     if @relative.save
       redirect_to root_url
-      flash[:success] = "Relative create.Admin check your relative"
+      flash[:success] = t('.save')
     else
       render 'new'
       # flash[:danger] = "Sorry,problem"
@@ -45,7 +45,7 @@ class RelativesController < ApplicationController
 
   def update
     if @relative.update_attributes(relative_params)
-      flash[:success] = "relative information update"
+      flash[:success] = t('.edit')
       redirect_to @relative
     else
       redirect_to 'edit'
@@ -54,7 +54,7 @@ class RelativesController < ApplicationController
 
   def destroy
     @relative.destroy
-    flash[:success] = "relative removed"
+    flash[:success] = t('.remove')
     redirect_to root_url
   end
 

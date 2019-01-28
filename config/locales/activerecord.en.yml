@@ -15,4 +15,19 @@ en:
         email: 'Email'
         image: 'Image'
         password: 'Password'
-        confirmation: 'Confirmation'
+        password_confirmation: 'Password confirmation'
+
+  #Controllers
+  relatives:
+    create:
+      save: 'Relative create.Admin check your relative'
+    update:
+      edit: 'Relative information update'
+    destroy:
+      remove: Relative removed'
+  users:
+    update:
+      edit: 'Profile updated'
+  sessions:
+    create:
+      error: 'Invalid email/password combination'     
