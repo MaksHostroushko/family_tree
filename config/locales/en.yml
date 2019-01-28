@@ -12,8 +12,17 @@ en:
     categories:
       find: 'Find'
     form:
-      submit: 'Ready'  
+      submit: 'Ready'
   users:
     edit:
       edit: 'Edit'
       save: 'Save changes'
+    new:
+      signup: 'Sign up'
+      label_text: 'Only name(Example: Oleg)'
+      new_ac: 'Create new account'
+  sessions:
+      login:
+        login: 'Log in'
+        new_user: 'New user?'
+        signup: 'Sign up now!'

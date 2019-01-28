@@ -1,4 +1,4 @@
-<h1 class="h_session">Log in</h1>
+<h1 class="h_session"><%= t('.login') %></h1>
 <br>
   <%= form_for(:session, url: login_path) do |f| %>
 
@@ -13,10 +13,10 @@
   </div>
 
   <div class="text-center">
-    <%= f.submit "Log in", class: "btn btn-primary" %>
+    <%= f.submit t('.login'), class: "btn btn-primary" %>
   </div>
   <% end %>
 <br>
   <div class="text-center">
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p><%= t('.new_user') %> <%= link_to t('.signup'), signup_path %></p>
   </div>

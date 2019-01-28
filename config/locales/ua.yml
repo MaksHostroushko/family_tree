@@ -12,8 +12,17 @@ ua:
     categories:
       find: 'Пошук'
     form:
-      submit: 'Готово'  
+      submit: 'Готово'
   users:
     edit:
       edit: 'Редагування'
       save: 'Зберегти зміни'
+    new:
+      signup: 'Реєстрація'
+      label_text: "Тільки ім'я (наприклад: Олег)"
+      new_ac: 'Створити новий акаунт'  
+  sessions:
+      login:
+        login: 'Вхід'
+        new_user: 'Новий користувач?'
+        signup: 'Зареєструйся зараз!'
