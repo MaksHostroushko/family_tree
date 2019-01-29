@@ -12,6 +12,6 @@
         <% end %>
       </ul>
       <%= submit_tag t('.find'), class: 'btn btn-success btn_category btn-sm' if @categories.present? %>
-      <%= link_to "New", new_category_path, class: 'btn btn-danger btn-sm' %>
+      <%= link_to t('.new'), new_category_path, class: 'btn btn-danger btn-sm' %>
   <% end %>
   </div>

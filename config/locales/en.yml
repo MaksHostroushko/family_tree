@@ -10,12 +10,14 @@ en:
       login: 'Log in'
       all_us: 'All users'
   relatives:
-    categories:
+    categories_index:
       find: 'Find'
+      new: 'New'
     form:
       submit: 'Ready'
     index:
       text: 'No people'
+      no_categ: 'No categories'
   users:
     edit:
       edit: 'Edit'
@@ -24,11 +26,18 @@ en:
       signup: 'Sign up'
       label_text: 'Only name(Example: Oleg)'
       new_ac: 'Create new account'
+    index:
+      text: 'All users'
   sessions:
     login:
       login: 'Log in'
       new_user: 'New user?'
       signup: 'Sign up now!'
+  categories:
+    new:
+      .new_cat: 'New Category'
+    form:
+      create: 'Create category'
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"

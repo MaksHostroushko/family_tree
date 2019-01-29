@@ -10,8 +10,10 @@
       <% end %>
       <h2><%#= sanitize relative.description.truncate(15) %></h2>
     </div>
+    <% if current_user?(relative.user) %>
     <%#= link_to 'show', relative_path(relative), class: 'btn btn-success btn-sm' %>
-    <%#= link_to 'edit', edit_relative_path(relative), class: 'btn btn-warning btn-sm' %>
-    <%#= link_to "delete", relative, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+      <%= link_to 'edit', edit_relative_path(relative), class: 'btn btn-warning btn-sm' %>
+      <%= link_to "delete", relative, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+    <% end %>
   </div>
 <% end %>

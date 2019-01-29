@@ -10,12 +10,14 @@ ua:
       login: 'Вхід'
       all_us: 'Усі користувачі'
   relatives:
-    categories:
+    categories_index:
       find: 'Пошук'
+      new: 'Новa'
     form:
       submit: 'Готово'
     index:
       text: 'Почніть заповнювати інформацію про рідних прямо зараз'
+    no_categ: 'Категорій ще створено'  
   users:
     edit:
       edit: 'Редагування'
@@ -24,11 +26,18 @@ ua:
       signup: 'Реєстрація'
       label_text: "Тільки ім'я (наприклад: Олег)"
       new_ac: 'Створити новий акаунт'
+    index:
+      text: 'Усі користувачі'
   sessions:
     login:
       login: 'Вхід'
       new_user: 'Новий користувач?'
       signup: 'Зареєструйся зараз!'
+  categories:
+    new:
+      new_cat: 'Нова категорія'
+    form:
+      create: 'Створити нову категорію'
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"
