@@ -20,5 +20,6 @@ Rails.application.routes.draw do
     resources :relatives do
       resources :categories
     end
+    resources :categories
   end
 end

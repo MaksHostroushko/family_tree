@@ -1,7 +1,11 @@
 <% if logged_in? %>
   <div class="row">
     <div class="col-md-2">
-      <%= render 'categories' %>
+      <% if @user.categories.present? %>
+        <%= render 'categories' %>
+      <% else %>
+        No,categories
+      <% end %>
     </div>
     <div class="users_main col-md-10 row">
         <% if @user.relatives.present? %>
