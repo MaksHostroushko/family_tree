@@ -5,6 +5,8 @@
         <%= render 'categories' %>
       <% else %>
         No,categories
+        <br>
+        <%= link_to "New", new_category_path, class: 'btn btn-danger btn-sm' %>
       <% end %>
     </div>
     <div class="users_main col-md-10 row">
