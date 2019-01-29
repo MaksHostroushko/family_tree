@@ -8,13 +8,14 @@ en:
       settings: 'Settings'
       logout: 'Log out'
       login: 'Log in'
+      all_us: 'All users'
   relatives:
     categories:
       find: 'Find'
     form:
       submit: 'Ready'
     index:
-      text: 'No people'  
+      text: 'No people'
   users:
     edit:
       edit: 'Edit'

@@ -11,7 +11,7 @@
           <% if logged_in? %>
             <%= link_to t('.all_rel'), root_path, class: 'navbar_link'%>
             <%= link_to t('.new_rel'), new_relative_path, class: 'navbar_link' %>
-            <%= link_to "All users", users_path, class: 'navbar_link'  %>
+            <%= link_to t('.all_us'), users_path, class: 'navbar_link'  %>
           </li>
             <%= form_tag relatives_path, method: :get, class: "form-inline my-2 my-lg-0 search_form" do %>
             <%= text_field_tag(
