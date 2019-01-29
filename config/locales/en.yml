@@ -22,7 +22,10 @@ en:
       label_text: 'Only name(Example: Oleg)'
       new_ac: 'Create new account'
   sessions:
-      login:
-        login: 'Log in'
-        new_user: 'New user?'
-        signup: 'Sign up now!'
+    login:
+      login: 'Log in'
+      new_user: 'New user?'
+      signup: 'Sign up now!'
+  time:
+   formats:
+      long: "%Y-%m-%d %H:%M:%S"

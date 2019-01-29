@@ -20,9 +20,12 @@ ua:
     new:
       signup: 'Реєстрація'
       label_text: "Тільки ім'я (наприклад: Олег)"
-      new_ac: 'Створити новий акаунт'  
+      new_ac: 'Створити новий акаунт'
   sessions:
-      login:
-        login: 'Вхід'
-        new_user: 'Новий користувач?'
-        signup: 'Зареєструйся зараз!'
+    login:
+      login: 'Вхід'
+      new_user: 'Новий користувач?'
+      signup: 'Зареєструйся зараз!'
+  time:
+   formats:
+      long: "%Y-%m-%d %H:%M:%S"
