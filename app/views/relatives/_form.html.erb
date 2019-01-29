@@ -41,7 +41,7 @@
   <%= f.file_field :images, multiple: true %>
 </div>
 
-<div class="form-group">
+<div class="form-group category_group">
   <%= collection_check_boxes(:relative, :category_ids, Category.all, :id, :name) do |b| %>
   <%=  b.label(:"data-value" => b.value) { b.check_box + b.text } %>
   <% end %>
