@@ -1,5 +1,6 @@
 class RelativesController < ApplicationController
   before_action :find_relative, only: [:show, :edit, :update, :destroy]
+    before_action :correct_user,   only: :destroy
 
   def index
     @categories = Category.all
@@ -24,7 +25,7 @@ class RelativesController < ApplicationController
   end
 
   def create
-    @relative = Relative.new(relative_params)
+    @relative = current_user.relatives.build(relative_params)
     @user = current_user
     if @relative.save
       redirect_to root_url
@@ -66,5 +67,10 @@ private
 
   def find_relative
     @relative = Relative.find(params[:id])
+  end
+
+  def correct_user
+    @relative = current_user.relatives.find_by(id: params[:id])
+    redirect_to root_url if @relative.nil?
   end
 end

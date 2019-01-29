@@ -13,6 +13,8 @@ en:
       find: 'Find'
     form:
       submit: 'Ready'
+    index:
+      text: 'No people'  
   users:
     edit:
       edit: 'Edit'
