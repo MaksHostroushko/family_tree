@@ -1,0 +1,12 @@
+
+<div class="product-card text-center products" style="width: 20rem">
+  <div class="card-body">
+    <% if user.image.present? %>
+      <%= link_to (image_tag user.image.url(:small) ), user_path(user) %>
+    <% else %>
+      <%= link_to (image_tag 'empty.png', width: 152 ), user_path(user) %>
+    <% end %>
+    <h2><%= link_to user.name, user_path(user), class: 'Link_show_relative' %></h2>
+    <h2><%#= sanitize relative.description.truncate(15) %></h2>
+  </div>
+</div>
