@@ -1,8 +1,9 @@
 ActiveAdmin.register Relative do
-  permit_params :relative, :of, :first_name, :second_name, :maiden_name, :description, :born, :family_status, :children, :published, images:[], category_ids: []
+  permit_params :relative, :of, :user, :first_name, :second_name, :maiden_name, :description, :born, :family_status, :children, :published, images:[], category_ids: []
   #
   form title: 'A custom title' do |f|
       inputs 'Details' do
+        input :user
         input :first_name
         input :second_name
         input :maiden_name
@@ -19,6 +20,7 @@ ActiveAdmin.register Relative do
 
     index do
       id_column
+      column :user
       column :first_name
       column :second_name
       column :maiden_name
@@ -34,6 +36,7 @@ ActiveAdmin.register Relative do
 
     show do
       attributes_table do
+        row :user
         row :first_name
         row :second_name
         row :maiden_name
