@@ -12,10 +12,11 @@ en:
         children: 'Children'
       user:
         name: 'Name'
+        second_name: 'Second_name'
         email: 'Email'
         image: 'Image'
         password: 'Password'
-        password_confirmation: 'Password confirmation'
+        password_confirmation: 'Password confirmation'  
 
   #Controllers
   relatives:
@@ -30,4 +31,11 @@ en:
       edit: 'Profile updated'
   sessions:
     create:
-      error: 'Invalid email/password combination'     
+      error: 'Invalid email/password combination'
+  categories:
+    create:
+      save: 'Category create'
+    update:
+      edit: 'Category update'
+    destroy:
+      delete: 'Category removed'

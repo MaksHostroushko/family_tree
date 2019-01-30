@@ -12,10 +12,11 @@ ua:
         children: 'Діти'
       user:
         name: "Ім'я"
+        second_name: 'Прізвище'
         email: 'Пошта'
         image: 'Зображення'
         password: 'Пароль'
-        password_confirmation: 'Підтвердження'
+        password_confirmation: 'Підтвердження'  
 
     #Controllers
   relatives:
@@ -31,3 +32,10 @@ ua:
   sessions:
     create:
       error: 'Недійсна комбінація електронної пошти / пароля'
+  categories:
+    create:
+      save: 'Категорію створено'
+    update:
+      edit: 'Категорію оновлено'
+    destroy:
+      delete: 'Категорію видалено'

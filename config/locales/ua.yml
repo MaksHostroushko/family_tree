@@ -17,14 +17,17 @@ ua:
       submit: 'Готово'
     index:
       text: 'Почніть заповнювати інформацію про рідних прямо зараз'
-    no_categ: 'Категорій ще створено'  
+    no_categ: 'Категорій ще створено'
   users:
     edit:
       edit: 'Редагування'
       save: 'Зберегти зміни'
     new:
       signup: 'Реєстрація'
-      label_text: "Тільки ім'я (наприклад: Олег)"
+      label_text: "Приклад: Олег"
+      label_text_two: 'Приклад: Курчіненко'
+      e_email: 'example@gmail.com'
+      e_pass: 'Мінімум 6 символів'
       new_ac: 'Створити новий акаунт'
     index:
       text: 'Усі користувачі'
@@ -33,11 +36,20 @@ ua:
       login: 'Вхід'
       new_user: 'Новий користувач?'
       signup: 'Зареєструйся зараз!'
+      email: 'Пошта'
+      password: 'Пароль'
   categories:
     new:
       new_cat: 'Нова категорія'
     form:
       create: 'Створити нову категорію'
+  shared:
+    errors:
+      er_text: 'Форма містить'
+      er: 'помилoк'
+    error_messages:
+      er_text: 'Форма містить'
+      er: 'помилoк'
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"

@@ -1,12 +1,13 @@
-<% provide(:title, "#{@user.name}") %>
+<% provide(:title, "#{@user.name} #{@user.second_name}") %>
 
 <div class="text-center">
-  <h1><%= @user.name %></h1>
+  <h1><b><%= @user.name %> <%= @user.second_name %></b></h1>
 </div>
-<div class="">
-      <% if @user.relatives.present? %>
-      <ol class="">
-        <%= render @relatives %>
-      </ol>
-    <% end %>
-  </div>
+
+<div>
+    <% if @user.relatives.present? %>
+    <ol>
+      <%= render @relatives %>
+    </ol>
+  <% end %>
+</div>

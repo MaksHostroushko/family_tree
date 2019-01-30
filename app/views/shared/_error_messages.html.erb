@@ -1,7 +1,7 @@
 <% if @relative.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
-      The form contains <%= pluralize(@relative.errors.count, "error") %>.
+      <%= t('.er_text') %> <%= pluralize(@relative.errors.count, t('.er')) %>.
     </div>
     <ul>
     <% @relative.errors.full_messages.each do |msg| %>

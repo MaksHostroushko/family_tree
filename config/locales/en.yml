@@ -24,7 +24,10 @@ en:
       save: 'Save changes'
     new:
       signup: 'Sign up'
-      label_text: 'Only name(Example: Oleg)'
+      label_text: 'Example: Oleg'
+      label_text_two: 'Example: Kyrhinenko'
+      e_email: 'example@gmail.com'
+      e_pass: 'minimum 6 symbols'
       new_ac: 'Create new account'
     index:
       text: 'All users'
@@ -33,11 +36,20 @@ en:
       login: 'Log in'
       new_user: 'New user?'
       signup: 'Sign up now!'
+      email: 'Email'
+      password: 'Pass'
   categories:
     new:
       .new_cat: 'New Category'
     form:
       create: 'Create category'
+  shared:
+    errors:
+      er_text: 'The form contains'
+      er: 'errors'
+    error_messages:
+      er_text: 'The form contains'
+      er: 'errors'
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"

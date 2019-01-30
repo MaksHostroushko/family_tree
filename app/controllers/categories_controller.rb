@@ -18,7 +18,7 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to root_url
       # flash[:success] = t('.save')
-      flash[:success] = "fsfsa"
+      flash[:success] = t('.save')
     else
       render 'new'
       # flash[:danger] = "Sorry,problem"
@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
   def update
     if @category.update_attributes(category_params)
       # flash[:success] = t('.edit')
-      flash[:success] = 'sdfsdfsd'
+      flash[:success] = t('.edit')
       redirect_to @category
     else
       redirect_to 'edit'
@@ -46,7 +46,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
     # flash[:success] = t('.remove')
-    flash[:success] = 'sdfsadg'
+    flash[:success] = t('.delete')
     redirect_to root_url
   end
 
