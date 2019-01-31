@@ -8,6 +8,7 @@ ua:
       settings: 'Налаштування'
       logout: 'Вихід'
       login: 'Вхід'
+      signup: 'Реєстрація'
       all_us: 'Усі користувачі'
   relatives:
     categories_index:

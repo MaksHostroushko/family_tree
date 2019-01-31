@@ -35,20 +35,24 @@
     </ul>
 
     <span class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <%= @user.name %>
+      <a class="nav-link dropdown-toggle nav_name" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class=''><%= @user.name %></span>
       </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-menu col-sm" aria-labelledby="dropdownMenuButton">
         <%= link_to t('.profile'), current_user, class: "dropdown-item" %>
         <hr>
-        <%= link_to t('.settings'), edit_user_path(current_user), class: "dropdown-item" %>
+        <%= link_to t('.settings'), edit_user_path(current_user), class: "dropdown-item nav_nav" %>
         <hr>
         <%= link_to t('.logout'), logout_path, method: :delete, class: "dropdown-item" %>
       </div>
     </span>
-    <%= link_to(image_tag(@user.image.mini.url, alt: "Img", class: "mini_image"), user_path(@user)) if @user.image.url.present? %>
-    <% elsif signup_path %>
-    <%= link_to t('.login'), login_path, class: 'navbar_link' %>
+      <%= link_to(image_tag(@user.image.mini.url, alt: "Img", class: "mini_image"), user_path(@user)) if @user.image.url.present? %>
+    <% elsif %>
+      <%= link_to t('.login'), login_path, class: 'navbar_link' %>
+      <%= link_to t('.signup'), signup_path, class: 'navbar_link' %>
+
+      <%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'nav-link img_locales' %>
+      <%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'nav-link' %>
     <% end %>
   </div>
 </nav>

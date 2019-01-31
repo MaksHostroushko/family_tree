@@ -1,8 +1,6 @@
 <% provide(:title, "Sign up") %>
 <h1 class="h_session"><%= t('.signup') %></h1>
 
-<!-- <div class="row"> -->
-  <!-- <div class="col-md-6 col-md-offset-3"> -->
     <%= form_for(@user, url: signup_path) do |f| %>
     <%= render 'shared/errors' %>
 
@@ -51,6 +49,8 @@
     <div class="text-center">
       <%= f.submit t('.new_ac'), class: "btn btn-primary" %>
     </div>
+
+    <p></p>
+
+    <!-- <p class='text-center'>Have account? <%#= link_to "Log in right now!", login_path %></p> -->
     <% end %>
-  <!-- </div> -->
-<!-- </div> -->

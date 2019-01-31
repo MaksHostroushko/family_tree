@@ -8,6 +8,7 @@ en:
       settings: 'Settings'
       logout: 'Log out'
       login: 'Log in'
+      signup: 'Sign up'
       all_us: 'All users'
   relatives:
     categories_index:
@@ -37,7 +38,7 @@ en:
       new_user: 'New user?'
       signup: 'Sign up now!'
       email: 'Email'
-      password: 'Pass'
+      password: 'Password'
   categories:
     new:
       .new_cat: 'New Category'
