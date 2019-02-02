@@ -18,13 +18,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-     if @user.save
-       log_in @user
-       redirect_to root_path
-       flash[:info] = "Welcome to GHBlog"
-     else
-       render 'new'
-     end
+    if @user.save
+      log_in @user
+      flash[:success] = "Welcome, #{@user.name}!"
+      UserMailer.send_mail_to_user(@user).deliver_now!
+      UserMailer.send_mail_to_admin(@user).deliver_now!
+      redirect_to @user
+    else
+      render 'new'
+    end
   end
 
   def edit; end

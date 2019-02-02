@@ -39,6 +39,7 @@ ua:
       signup: 'Зареєструйся зараз!'
       email: 'Пошта'
       password: 'Пароль'
+      remember: "Запам'ятати мене"
   categories:
     new:
       new_cat: 'Нова категорія'
