@@ -2,13 +2,23 @@ body {
   max-width: 100%;
 }
 
-.navbar_link {
-  padding-left: 10px;
+.navbar_link_1 {
+  // padding-left: 10px;
   font-size: 20px;
   font-style: normal;
   color: black;
   margin-top: auto;
   margin-bottom: auto;
+  position: absolute;
+  right: 150px;
+}
+
+.navbar_link_2 {
+  font-size: 20px;
+  font-style: normal;
+  color: black;
+  position: absolute;
+  right: 40px;
 }
 
 .navbar_link:hover {
@@ -116,5 +126,13 @@ ul.pagination {
 }
 
 .img_locales {
-  margin-left: 2em;
+  margin-left: 1em;
+  // position: absolute;
+  // right: 100px;
+}
+
+.img_locales_2 {
+  margin-left: .3em;
+  // position: absolute;
+  // right: 100px;
 }

@@ -48,11 +48,11 @@
     </span>
       <%= link_to(image_tag(@user.image.mini.url, alt: "Img", class: "mini_image"), user_path(@user)) if @user.image.url.present? %>
     <% elsif %>
-      <%= link_to t('.login'), login_path, class: 'navbar_link' %>
-      <%= link_to t('.signup'), signup_path, class: 'navbar_link' %>
+      <%= link_to t('.login'), login_path, class: 'navbar_link_1' %>
+      <%= link_to t('.signup'), signup_path, class: 'navbar_link_2' %>
 
-      <%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'nav-link img_locales' %>
-      <%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'nav-link' %>
-    <% end %>
+      <%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'img_locales' %>
+      <%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'img_locales_2' %>
+      <% end %>
   </div>
 </nav>

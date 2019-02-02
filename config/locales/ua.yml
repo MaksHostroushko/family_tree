@@ -25,8 +25,8 @@ ua:
       save: 'Зберегти зміни'
     new:
       signup: 'Реєстрація'
-      label_text: "Приклад: Олег"
-      label_text_two: 'Приклад: Курчіненко'
+      label_text: "Приклад: Тарко"
+      label_text_two: 'Приклад: Петрушко'
       e_email: 'example@gmail.com'
       e_pass: 'Мінімум 6 символів'
       new_ac: 'Створити новий акаунт'
