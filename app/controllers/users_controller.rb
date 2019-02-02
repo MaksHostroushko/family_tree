@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome, #{@user.name}!"
       UserMailer.send_mail_to_user(@user).deliver_now!
       UserMailer.send_mail_to_admin(@user).deliver_now!
-      redirect_to @user
+      redirect_to root_path
     else
       render 'new'
     end
