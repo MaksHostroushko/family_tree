@@ -39,6 +39,7 @@ en:
       signup: 'Sign up now!'
       email: 'Email'
       password: 'Password'
+      remember: 'Remember me'
   categories:
     new:
       .new_cat: 'New Category'
