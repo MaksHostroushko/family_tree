@@ -1,5 +1,5 @@
 ActiveAdmin.register Relative do
-  permit_params :relative, :of, :user, :first_name, :second_name, :maiden_name, :description, :born, :family_status, :children, :published, images:[], category_ids: []
+  permit_params :relative, :of, :user, :first_name, :second_name, :user_id, :_wysihtml5_mode, :locale, :maiden_name, :description, :born, :family_status, :children, :published, images:[], category_ids: []
   #
   form title: 'A custom title' do |f|
       inputs 'Details' do

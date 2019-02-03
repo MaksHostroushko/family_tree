@@ -1,13 +1,17 @@
 <% if relative.published %>
   <div class="product-card text-center products" style="width: 20rem">
     <div class="card-body">
-      <%= link_to (image_tag relative.images[0].url(:small) if relative.images.present?), relative_path(relative) %>
-      <h2><%= link_to relative.first_name, relative_path(relative), class: 'Link_show_relative' %></h2>
-      <% if relative.maiden_name.present? %>
-        <h2><%= relative.second_name %>(<%= relative.maiden_name %>)</h2>
-      <% else %>
-        <h2><%= relative.second_name %></h2>
+      <% if relative.images.present? %>
+        <%= link_to (image_tag relative.images[0].url(:small)), relative_path(relative) %>
+      <% elsif %>
+        <%= link_to (image_tag 'empty.png', width: 152), relative_path(relative) %>
       <% end %>
+        <h2><%= link_to relative.first_name, relative_path(relative), class: 'Link_show_relative' %></h2>
+        <% if relative.maiden_name.present? %>
+          <h2><%= relative.second_name %>(<%= relative.maiden_name %>)</h2>
+        <% else %>
+          <h2><%= relative.second_name %></h2>
+        <% end %>
       <h2><%#= sanitize relative.description.truncate(15) %></h2>
     </div>
     <% if current_user?(relative.user) %>
