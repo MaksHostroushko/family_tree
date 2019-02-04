@@ -2,7 +2,7 @@ ActiveAdmin.register User do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :user, :of, :name, :email, :image
+permit_params :user, :of, :name, :email, :image, :locale
 form title: 'A custom title' do |f|
     inputs 'Details' do
       input :name
