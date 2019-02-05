@@ -46,17 +46,19 @@
         <%= link_to t('.logout'), logout_path, method: :delete, class: "dropdown-item" %>
       </div>
     </span>
+
       <% if @user.image.url.present? %>
         <%= link_to(image_tag(@user.image.mini.url, width:50, alt: "Img"), user_path(@user)) %>
       <% else %>
         <%= link_to(image_tag('empty.png', width: 50), user_path(@user)) %>
         <% end %>
+
     <% elsif %>
       <%= link_to t('.login'), login_path, class: 'navbar_link_1' %>
       <%= link_to t('.signup'), signup_path, class: 'navbar_link_2' %>
 
       <%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'img_locales' %>
       <%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'img_locales_2' %>
-      <% end %>
+    <% end %>
   </div>
 </nav>
