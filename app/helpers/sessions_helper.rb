@@ -35,7 +35,7 @@ module SessionsHelper
   end
 
   def forget(user)
-    user.forget
+    user.forget if user.present?
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
