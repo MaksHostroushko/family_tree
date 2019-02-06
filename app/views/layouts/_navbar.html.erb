@@ -26,9 +26,9 @@
             <% end %>
             <!-- <li class="nav-item"> -->
               <!-- <div class='row'> -->
-                <%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'nav-link' %>
+              <span class="<%= 'locale' if I18n.locale == :en %>"><%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'nav-link' %></span>
 
-                <%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'nav-link' %>
+              <span class="<%= 'locale' if I18n.locale == :ua %>"><%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'nav-link' %></span>
               <!-- </div> -->
             <!-- </li> -->
       <!-- </div> -->
@@ -39,8 +39,6 @@
         <span class=''><%= @user.name %></span>
       </a>
       <div class="dropdown-menu col-sm" aria-labelledby="dropdownMenuButton">
-        <%= link_to t('.profile'), current_user, class: "dropdown-item" %>
-        <hr>
         <%= link_to t('.settings'), edit_user_path(current_user), class: "dropdown-item nav_nav" %>
         <hr>
         <%= link_to t('.logout'), logout_path, method: :delete, class: "dropdown-item" %>
@@ -48,17 +46,18 @@
     </span>
 
       <% if @user.image.url.present? %>
-        <%= link_to(image_tag(@user.image.mini.url, width:50, alt: "Img"), user_path(@user)) %>
+        <%= link_to(image_tag(@user.image.mini.url, width:50, alt: "Img"), edit_user_path(current_user)) %>
       <% else %>
-        <%= link_to(image_tag('empty.png', width: 50), user_path(@user)) %>
+        <%= link_to(image_tag('empty.png', width: 50), edit_user_path(current_user)) %>
         <% end %>
 
     <% elsif %>
       <%= link_to t('.login'), login_path, class: 'navbar_link_1' %>
       <%= link_to t('.signup'), signup_path, class: 'navbar_link_2' %>
 
-      <%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'img_locales' %>
-      <%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'img_locales_2' %>
+      <span class="<%= 'locale' if I18n.locale == :en %>"><%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'img_locales' %></span>
+
+      <span class="<%= 'locale' if I18n.locale == :ua %>"><%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'img_locales_2' %></span>
     <% end %>
   </div>
 </nav>
