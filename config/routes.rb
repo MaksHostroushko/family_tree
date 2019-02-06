@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
 
-  root 'relatives#index'
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+    root 'relatives#index'
 
     get 'sessions/new'
     get 'users/new'

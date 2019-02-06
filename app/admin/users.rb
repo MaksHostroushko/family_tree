@@ -2,12 +2,13 @@ ActiveAdmin.register User do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :user, :of, :name, :second_name, :email, :image
+permit_params :user, :of, :name, :second_name, :email, :image, :password
 form title: 'A custom title' do |f|
     inputs 'Details' do
       input :name
       input :email
       input :second_name
+      input :password
       # input :categories, as: :check_boxes, collection: Category.all.map { |c| [c.name, c.id] }
       input :image, as: :file#, input_html: { multiple: true }
     end

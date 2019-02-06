@@ -1,5 +1,6 @@
 class Relative < ApplicationRecord
   belongs_to :user
+  
   has_many :category_relatives, dependent: :nullify
   has_many :categories, through: :category_relatives
 
