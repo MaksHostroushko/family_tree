@@ -23,7 +23,7 @@
             <%= button_tag(type: "submit", class: "search") do %>
               <%= fa_icon "search lg" %>
             <% end %>
-            <% end %>
+          <% end %>
             <!-- <li class="nav-item"> -->
               <!-- <div class='row'> -->
               <span class="<%= 'locale' if I18n.locale == :en %>"><%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'nav-link' %></span>
@@ -49,7 +49,7 @@
         <%= link_to(image_tag(@user.image.mini.url, width:50, alt: "Img"), edit_user_path(current_user)) %>
       <% else %>
         <%= link_to(image_tag('empty.png', width: 50), edit_user_path(current_user)) %>
-        <% end %>
+      <% end %>
 
     <% elsif %>
       <%= link_to t('.login'), login_path, class: 'navbar_link_1' %>
