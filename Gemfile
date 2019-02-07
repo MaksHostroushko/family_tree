@@ -22,6 +22,7 @@ gem 'sendgrid-ruby'
 gem 'ransack'
 # gem 'active_admin_editor'
 gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
+gem 'factory_bot_rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -77,6 +78,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'shoulda-matchers', '4.0.0.rc1'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
