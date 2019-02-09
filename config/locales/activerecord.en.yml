@@ -60,7 +60,7 @@ en:
       body: 'There were problems with the following fields:'
       header:
         one: 1 error prohibited this %{model} from being saved
-        other: "%{count} errors prohibited this %{model} from being saved" 
+        other: "%{count} errors prohibited this %{model} from being saved"
   #Controllers
   relatives:
     create:
@@ -72,6 +72,8 @@ en:
   users:
     update:
       edit: 'Profile updated'
+    create:
+      welcome: 'Welcome'  
   sessions:
     create:
       error: 'Invalid email/password combination'

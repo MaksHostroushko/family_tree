@@ -81,6 +81,8 @@ ua:
   users:
     update:
       edit: 'Профіль оновлено'
+    create:
+      welcome: 'Вітаємо'  
   sessions:
     create:
       error: 'Недійсна комбінація електронної пошти / пароля'
