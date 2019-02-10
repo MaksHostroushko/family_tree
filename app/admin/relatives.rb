@@ -24,7 +24,7 @@ ActiveAdmin.register Relative do
       column :first_name
       column :second_name
       column :maiden_name
-      column :description
+      # column :description
       column :born
       column :family_status
       column :children
