@@ -8,21 +8,21 @@ en:
           has_many: "Cannot delete record because dependent %{record} exist"
     attributes:
       relative:
-        first_name: 'First_name'
-        second_name: 'Second_name'
-        maiden_name: 'Maiden_name'
-        born: 'Born'
-        description: 'Description'
+        first_name: 'First name*'
+        second_name: 'Second name*'
+        maiden_name: 'Maiden name'
+        born: 'Born*'
+        description: 'Description*'
         image: 'Image'
-        family_status: 'Family_status'
-        children: 'Children'
+        family_status: 'Family status'
+        children: 'Childrens'
       user:
-        name: 'Name'
-        second_name: 'Second_name'
-        email: 'Email'
+        name: 'Name*'
+        second_name: 'Second name*'
+        email: 'Email*'
         image: 'Image'
-        password: 'Password'
-        password_confirmation: 'Password confirmation'
+        password: 'Password*'
+        password_confirmation: 'Password confirmation*'
   errors:
     format: "%{attribute} %{message}"
     messages:
@@ -73,7 +73,7 @@ en:
     update:
       edit: 'Profile updated'
     create:
-      welcome: 'Welcome'  
+      welcome: 'Welcome'
   sessions:
     create:
       error: 'Invalid email/password combination'

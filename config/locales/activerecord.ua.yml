@@ -8,21 +8,21 @@ ua:
           has_many: 'Неможливо видалити запис, так як існують залежності: %{record}'
     attributes:
       relative:
-        first_name: "Ім'я"
-        second_name: 'Прізвище'
+        first_name: "Ім'я*"
+        second_name: 'Прізвище*'
         maiden_name: 'Дівоче прізвище'
-        born: 'Дата народження'
-        description: 'Опис'
+        born: 'Дата народження*'
+        description: 'Опис*'
         images: 'Зображення'
         family_status: 'Сімейний статус'
         children: 'Діти'
       user:
-        name: "Ім'я"
-        second_name: 'Прізвище'
-        email: 'Пошта'
+        name: "Ім'я*"
+        second_name: 'Прізвище*'
+        email: 'Пошта*'
         image: 'Зображення'
-        password: 'Пароль'
-        password_confirmation: 'Підтвердження'
+        password: 'Пароль*'
+        password_confirmation: 'Підтвердження*'
   errors:
     format: "%{attribute} %{message}"
     messages:
@@ -82,7 +82,7 @@ ua:
     update:
       edit: 'Профіль оновлено'
     create:
-      welcome: 'Вітаємо'  
+      welcome: 'Вітаємо'
   sessions:
     create:
       error: 'Недійсна комбінація електронної пошти / пароля'
