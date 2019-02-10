@@ -21,6 +21,7 @@
 //= require trix
 //= require flash
 //= require search
+//= require local-time
 
 $(document).on('turbolinks:load', function() {
     lightbox.init();
