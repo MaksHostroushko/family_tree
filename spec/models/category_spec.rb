@@ -1,9 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  it { should belong_to(:user) }
-  it { should have_many(:category_relatives), dependent:(:nullify) }
-  it { should have_many(:relatives), through:(:category_relatives)}
+  describe "associations" do
+    it { is_expected.to belong_to(:user) }
+  end
 
-  it { should validate_presence_of(:name)}
+  describe "validations" do
+    it { is_expected.to have_many(:category_relatives), dependent:(:nullify) }
+    it { is_expected.to have_many(:relatives), through:(:category_relatives)}
+    it { is_expected.to validate_presence_of(:name)}
+  end
 end
