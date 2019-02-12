@@ -11,7 +11,7 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe "#before_action " do
-    it { should use_before_action(:find_user) }
-    it { should_not use_before_action(:user_params) }
+    it { is_expected.to use_before_action(:find_user) }
+    it { is_expected.to_not use_before_action(:user_params) }
   end
 end
