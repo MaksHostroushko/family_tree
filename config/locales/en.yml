@@ -19,10 +19,14 @@ en:
     index:
       text: 'No people'
       no_categ: 'No categories'
+    relative:
+      edit: 'Edit'
+      delete: 'Delete'
   users:
     edit:
       edit: 'Edit'
       save: 'Save changes'
+      e_pass: 'minimum 6 symbols'
     new:
       signup: 'Sign up'
       label_text: 'Example: Oleg'
