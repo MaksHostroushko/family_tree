@@ -1,54 +1,55 @@
 <%= form_for @relative do |f| %>
   <%= render "shared/error_messages", object: @relative %>
+<div class="col-lg-6 center-block form_create">
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+  </div>
 
-<div class="form-group">
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name, class: 'form-control' %>
-</div>
+  <div class="form-group">
+    <%= f.label :second_name %>
+    <%= f.text_field :second_name, class: 'form-control' %>
+  </div>
 
-<div class="form-group">
-  <%= f.label :second_name %>
-  <%= f.text_field :second_name, class: 'form-control' %>
-</div>
+  <div class="form-group">
+    <%= f.label :born %>
+    <%= f.text_field :born, class: 'form-control' %>
+  </div>
 
-<div class="form-group">
-  <%= f.label :born %>
-  <%= f.text_field :born, class: 'form-control' %>
-</div>
+  <div class="form-group">
+    <%= f.label :maiden_name %>
+    <%= f.text_field :maiden_name, class: 'form-control' %>
+  </div>
 
-<div class="form-group">
-  <%= f.label :maiden_name %>
-  <%= f.text_field :maiden_name, class: 'form-control' %>
-</div>
+  <div class="form-group">
+    <%= f.label :family_status %>
+    <%= f.text_field :family_status, class: 'form-control' %>
+  </div>
 
-<div class="form-group">
-  <%= f.label :family_status %>
-  <%= f.text_field :family_status, class: 'form-control' %>
-</div>
+  <div class="form-group">
+    <%= f.label :children %>
+    <%= f.text_field :children, class: 'form-control' %>
+  </div>
 
-<div class="form-group">
-  <%= f.label :children %>
-  <%= f.text_field :children, class: 'form-control' %>
-</div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.trix_editor :description, class: 'form-control' %>
+  </div>
 
-<div class="form-group">
-  <%= f.label :description %>
-  <%= f.trix_editor :description, class: 'trix_editor' %>
-</div>
+  <div class="img-field">
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true %>
+  </div>
 
-<div class="img-field">
-  <%= f.label :images %>
-  <%= f.file_field :images, multiple: true %>
-</div>
+  <div class="form-group category_group">
+    <%= collection_check_boxes(:relative, :category_ids, @user.categories, :id, :name) do |b| %>
+    <%=  b.label(:"data-value" => b.value) { b.check_box + b.text } %>
+    <% end %>
+  </div>
 
-<div class="form-group category_group">
-  <%= collection_check_boxes(:relative, :category_ids, @user.categories, :id, :name) do |b| %>
-  <%=  b.label(:"data-value" => b.value) { b.check_box + b.text } %>
-  <% end %>
-</div>
-
-<div class="btn-form">
-  <%= f.submit t('.submit'), class: 'btn btn-success' %>
+  <div class="btn-form">
+    <%= f.submit t('.submit'), class: 'btn btn-success' %>
+  </div>
 </div>
 
 <% end %>

@@ -3,7 +3,6 @@ body {
 }
 
 .navbar_link_1 {
-  // padding-left: 10px;
   font-size: 20px;
   font-style: normal;
   color: black;
@@ -35,13 +34,6 @@ body {
   max-height: 50px;
 }
 
-.form-control {
-  max-width: 40em;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .form-group {
   text-align: center;
 }
@@ -67,19 +59,6 @@ body {
   max-width: 100%;
 }
 
-.trix_editor {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.trix-button-row {
-  max-width: 300px;
-  margin-left: auto;
-  // margin-right: auto;
-  margin-right: 640px;
-}
-
 ul.pagination {
   margin-left: auto;
   margin-right: auto;
@@ -94,15 +73,6 @@ ul.pagination {
     margin-right: 0.1em;
     padding: 0.3em 0.4em;
 }
-
-// .pagination a:hover {
-//     background: #202020 none repeat scroll 0 0;
-//     text-shadow: 1px 1px 1px #171717;
-// }
-//
-// .pagination a:active {
-//     text-shadow: none;
-// }
 
 .pagination .current {
     background: #202020 none repeat scroll 0 0;
@@ -133,14 +103,10 @@ ul.pagination {
 
 .img_locales {
   margin-left: 1em;
-  // position: absolute;
-  // right: 100px;
 }
 
 .img_locales_2 {
   margin-left: .3em;
-  // position: absolute;
-  // right: 100px;
 }
 
 .categ_text {
@@ -170,4 +136,9 @@ ul.pagination {
 
 ul.pagination {
   margin-top: 2em;
+}
+
+.form_create {
+  margin-left: auto;
+  margin-right: auto;
 }
