@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # before_action :correct_user,   only: [:edit, :update]
 
   def index
-    @users = User.all
+    @users = User.order(:name).page(params[:page])
     @user = current_user
   end
 
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = t('.edit')
-      redirect_to root_path 
+      redirect_to root_path
     else
       render 'edit'
     end

@@ -59,29 +59,10 @@ body {
   max-width: 100%;
 }
 
-ul.pagination {
-  margin-left: auto;
+.pagination{
+  margin-left: auto !important;
   margin-right: auto;
-  border: 1px solid lightblue;
-}
-
-.pagination {
-    font-size: 12px;
-}
-
-.pagination > * {
-    margin-right: 0.1em;
-    padding: 0.3em 0.4em;
-}
-
-.pagination .current {
-    background: #202020 none repeat scroll 0 0;
-    color: white;
-    text-shadow: 1px 1px 1px #171717;
-}
-
-.pagination .disabled {
-    color: #C0C0C0;
+  max-width: fit-content;
 }
 
 .search {

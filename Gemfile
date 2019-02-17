@@ -3,27 +3,23 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 gem 'bootstrap', '~> 4.1.3'
-gem 'will_paginate-bootstrap'
-gem 'will_paginate', '3.1.6'
 gem 'jquery-rails'
 gem 'carrierwave', '1.2.2'
 gem 'jquery-ui-rails'
 gem 'devise'
 gem 'activeadmin'
 gem 'trix-rails', require: 'trix'
-gem 'bootstrap-will_paginate', '1.0.0'
 gem "font-awesome-rails"
 gem 'lightbox2-rails'
 gem 'activeadmin'
 gem 'devise'
 gem 'letter_opener_web', '~> 1.0'
 gem 'sendgrid-ruby'
-# gem 'rails-i18n
 gem 'ransack'
-# gem 'active_admin_editor'
 gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
 gem 'factory_bot_rails'
 gem 'local_time'
+gem 'kaminari'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
