@@ -5,12 +5,9 @@ class RelativesController < ApplicationController
   def index
     @categories = Category.all
     @user = current_user
-    @relatives = @user.relatives.paginate(page: params[:page], per_page: 9) if @user.present?
-    @relatives = @relatives.where(id: CategoryRelative.where(category_id: params[:filter]).pluck(:relative_id)).paginate(page: params[:page], per_page: 9) if params[:filter].present?
-    @relatives = Relative.search(params[:search]).order(created_at: :asc).paginate(page: params[:page], per_page: 9)  if params[:search]
-    # @user = User.find(params[:id])
-    # @relatives = Relative.paginate(page: params[:page]).search(params[:search])
-    # @relatives = Relative.paginate(page: params[:page]).where(id: CategoryRelative.where(category_id: params[:filter]).pluck(:relative_id)) if params[:filter].present?
+    @relatives = @user.relatives.order(:first_name).page(params[:page]) if @user.present?
+    @relatives = @relatives.where(id: CategoryRelative.where(category_id: params[:filter]).pluck(:relative_id)).page(params[:page]) if params[:filter].present?
+    @relatives = Relative.search(params[:search]).order(created_at: :asc).page(params[:page]) if params[:search]
 
     respond_to do |format|
       format.html
