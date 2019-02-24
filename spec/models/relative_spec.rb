@@ -23,4 +23,8 @@ RSpec.describe Relative, type: :model do
     it { is_expected.to validate_length_of(:second_name).is_at_most(40) }
     it { is_expected.to validate_length_of(:born).is_at_most(20) }
   end
+
+  # describe "object" do
+  #   let(:relative) { FactoryBot.build(:relative) }
+  # end
 end

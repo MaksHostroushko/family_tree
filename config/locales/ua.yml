@@ -13,7 +13,7 @@ ua:
   relatives:
     categories_index:
       find: 'Пошук'
-      new: 'Новa'
+      new: 'Новий рід'
     form:
       submit: 'Готово'
     index:
