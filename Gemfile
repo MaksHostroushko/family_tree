@@ -17,7 +17,6 @@ gem 'letter_opener_web', '~> 1.0'
 gem 'sendgrid-ruby'
 gem 'ransack'
 gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
-gem 'factory_bot_rails'
 gem 'local_time'
 gem 'kaminari'
 gem 'faker'
@@ -78,6 +77,8 @@ group :test do
   gem 'chromedriver-helper'
   gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'factory_bot'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

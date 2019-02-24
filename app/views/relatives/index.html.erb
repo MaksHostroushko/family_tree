@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-2.5">
       <% if @user.categories.present? %>
         <%= render 'categories_index' %>
       <% else %>
@@ -11,7 +11,7 @@
         <%= link_to "New", new_category_path, class: 'btn btn-danger btn-sm categ_btn' %>
       <% end %>
     </div>
-    <div class="users_main col-md-10 row">
+    <div class="users_main col-md-8.5 row">
         <% if @user.relatives.present? %>
           <%= render @relatives %>
         <% else %>

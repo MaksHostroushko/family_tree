@@ -7,9 +7,9 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :second_name, presence: true
-  validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+  # validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  # validates :password, presence: true, length: { minimum: 6 }
 
   before_save { self.email = email.downcase }
 
@@ -18,6 +18,10 @@ class User < ApplicationRecord
   paginates_per 9
 
   has_secure_password
+
+  def collaboration?(relative)
+    relative.user.collaborators.include?(self.id.to_s)
+  end
 
   def User.digest(string)
    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

@@ -1,8 +1,14 @@
-FactoryBot.define do
-  factory :relative do
-    sequence(:first_name) { |n| "My article #{n}"}
-    sequence(:second_name) { |n| "The content of my article #{n}"}
-    sequence(:description) { |n| "my-article-#{n}"}
-    sequence(:born) { |n| "The content of my article #{n}"}
-  end
-end
+# FactoryBot.define do
+#   factory :relative do
+#     first_name "Max"
+#     second_name "Gostroushko"
+#     description "Description"
+#     born '12.12.12'
+#
+#     association :user, factory: :user
+#
+#     after(:build) do |categ|
+#       categ.relatives << build(:relative)
+#     end
+#   end
+# end

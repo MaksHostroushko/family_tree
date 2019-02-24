@@ -349,6 +349,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  factory_bot
   factory_bot_rails
   faker
   font-awesome-rails
