@@ -22,6 +22,8 @@
 //= require flash
 //= require search
 //= require local-time
+//= require bootstrap-datepicker
+//= require datepicker
 
 $(document).on('turbolinks:load', function() {
     lightbox.init();

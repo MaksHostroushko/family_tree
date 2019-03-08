@@ -60,15 +60,6 @@ ActiveRecord::Schema.define(version: 2019_02_24_114528) do
     t.index ["relative_id"], name: "index_category_relatives_on_relative_id"
   end
 
-  create_table "collaborations", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "relative_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["relative_id"], name: "index_collaborations_on_relative_id"
-    t.index ["user_id"], name: "index_collaborations_on_user_id"
-  end
-
   create_table "relatives", force: :cascade do |t|
     t.string "first_name"
     t.string "second_name"
@@ -103,7 +94,5 @@ ActiveRecord::Schema.define(version: 2019_02_24_114528) do
   add_foreign_key "categories", "users"
   add_foreign_key "category_relatives", "categories"
   add_foreign_key "category_relatives", "relatives"
-  add_foreign_key "collaborations", "relatives"
-  add_foreign_key "collaborations", "users"
   add_foreign_key "relatives", "users"
 end
