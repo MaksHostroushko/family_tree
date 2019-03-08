@@ -40,10 +40,22 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+
+    def add_collaborator
+      @user = current_user
+      # @user = current_user.collaborators.push
+    end
   private
 
   def user_params
-     params.require(:user).permit(:name, :second_name, :email, :password, :password_confirmation, :image, :locale)
+    if params[:collaborator_ids].present?
+      # debugger
+      # params[:collaborator_ids].map { |e| e  }
+      params.require(:user).permit(:name, :second_name, :email, :password, :password_confirmation, :image, :collaborator_ids, :collaborators)
+
+    else
+     params.require(:user).permit(:name, :second_name, :email, :password, :password_confirmation, :image, :locale, :collaborators)
+    end
    end
 
    def find_user
