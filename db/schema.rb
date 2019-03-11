@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 2019_03_09_093548) do
   add_foreign_key "category_relatives", "categories"
   add_foreign_key "category_relatives", "relatives"
   add_foreign_key "collaborations", "users"
+  add_foreign_key "collaborations", "relatives"
   add_foreign_key "relatives", "users"
   add_foreign_key "collaborations", "relatives"
 end
