@@ -1,4 +1,3 @@
-<%# if logged_in? %>
 <% if user_signed_in? %>
   <div class="row">
     <div class="col-md-2.5">
@@ -6,10 +5,10 @@
         <%= render 'categories_index' %>
       <% else %>
       <div class="categ_text">
-        <%= t('.no_categ') %>
+        <span class=""><%= t('.no_categ') %></span>
       </div>
         <!-- <br> -->
-        <%= link_to "New", new_category_path, class: 'btn btn-danger btn-sm categ_btn' %>
+        <%= link_to "New category", new_category_path, class: 'btn btn-danger btn-sm categ_btn' %>
       <% end %>
     </div>
     <div class="users_main col-md-8.5 row">

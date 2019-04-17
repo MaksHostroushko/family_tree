@@ -36,7 +36,7 @@
 
     <span class="nav-item dropdown">
       <a class="nav-link dropdown-toggle nav_name" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class=''><%= @user.name %></span>
+        <span class=''><%= @user.name || "User" %></span>
       </a>
       <div class="dropdown-menu col-sm" aria-labelledby="dropdownMenuButton">
         <%= link_to t('.settings'), edit_user_path(current_user), class: "dropdown-item nav_nav" %>

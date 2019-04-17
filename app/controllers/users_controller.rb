@@ -41,17 +41,18 @@ class UsersController < ApplicationController
   #   end
   # end
   #
-  # def edit; end
-  #
-  # def update
-  #   @user = User.find(params[:id])
-  #   if @user.update_attributes(user_params)
-  #     flash[:success] = t('.edit')
-  #     redirect_to root_path
-  #   else
-  #     render 'edit'
-  #   end
-  # end
+  def edit; end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      sign_in @user
+      flash[:success] = t('.edit')
+      redirect_to root_path
+    else
+      render 'edit'
+    end
+  end
 
     def add_collaborator
       @user = current_user
