@@ -21,6 +21,7 @@ gem 'local_time'
 gem 'kaminari'
 gem 'faker'
 gem 'bootstrap-datepicker-rails'
+gem 'activerecord-pick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'

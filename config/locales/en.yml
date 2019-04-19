@@ -36,14 +36,36 @@ en:
       new_ac: 'Create new account'
     index:
       text: 'All users'
-  sessions:
-    login:
-      login: 'Log in'
-      new_user: 'New user?'
-      signup: 'Sign up now!'
-      email: 'Email'
-      password: 'Password'
-      remember: 'Remember me'
+    sessions:
+      new:
+        login: 'Log in'
+        remember: 'Remember me'
+        # new_user: 'New user?'
+        # signup: 'Sign up now!'
+        # email: 'Email'
+        # password: 'Password'
+    shared:
+      links:
+        login: 'Log in'
+        signup: 'Sign up'
+        forgot: 'Forgot your password?'
+        confirm_inform: "Didn't receive confirmation instructions?"
+        unlock_inf: "Didn't receive unlock instructions?"
+    registrations:
+      new:
+        signup: 'Sign up'
+        signup_btn: 'Sign up'
+    passwords:
+      new:
+        forgot: 'Forgot your password?'
+        reset_instr: 'Send me reset password instructions'
+    mailer:
+      reset_password_instructions:
+        hello: 'Hello'
+        text_one: 'Someone has requested a link to change your password. You can do this through the link below.'
+        text_two: "If you didn't request this, please ignore this email."
+        text_three: "Your password won't change until you access the link above and create a new one."
+        btn_reset: 'Change my password'
   categories:
     new:
       .new_cat: 'New Category'

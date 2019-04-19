@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_16_101233) do
+ActiveRecord::Schema.define(version: 2019_04_17_075125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2019_04_16_101233) do
     t.string "born"
     t.text "description"
     t.string "image"
-    t.boolean "published", default: false
+    t.boolean "published", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "family_status"
