@@ -3,17 +3,18 @@ class UsersController < ApplicationController
   # before_action :logged_in_user, only: [:edit, :update]
   # before_action :correct_user,   only: [:edit, :update]
   def new
-        attr_accessor :name, :email, :password
-        def initialize(attributes = {})
-        @name  = attributes[:name]
-        @email = attributes[:email]
-        @password = attributes[:password]
-      end
-      end
+    attr_accessor :name, :email, :password
 
-      def formatted_email
-        "#{@name} <#{@email}>"
-      end
+    def initialize(attributes = {})
+      @name  = attributes[:name]
+      @email = attributes[:email]
+      @password = attributes[:password]
+    end
+  end
+
+  def formatted_email
+    "#{@name} <#{@email}>"
+  end
 
   def index
     @users = User.order(:name).page(params[:page])
