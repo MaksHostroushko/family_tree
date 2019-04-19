@@ -5,6 +5,7 @@
     <% (User.all - [current_user]).each do |c| %>
       <%= label_tag :collaborator_name,  c.name %>
       <%= check_box_tag "collaborator_ids[]", value: c.id %>
+      <br>
     <% end %>
   </div>
   <%= submit_tag %>

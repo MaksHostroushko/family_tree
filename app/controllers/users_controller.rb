@@ -55,10 +55,10 @@ class UsersController < ApplicationController
     end
   end
 
-    def add_collaborator
-      @user = current_user
-      # @user = current_user.collaborators.push
-    end
+  def add_collaborator
+    @user = current_user
+    # @user = current_user.collaborators.push
+  end
 
   private
 
