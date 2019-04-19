@@ -17,8 +17,9 @@ en:
     form:
       submit: 'Ready'
     index:
-      text: 'No people'
-      no_categ: 'No categories'
+      text: 'Start filling out your family information right now'
+      no_categ: 'Pedigrees have not yet been created'
+      pedig_btn: 'New pedigree'
     relative:
       edit: 'Edit'
       delete: 'Delete'
