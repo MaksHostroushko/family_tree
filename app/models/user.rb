@@ -25,6 +25,14 @@ class User < ApplicationRecord
     relative.user.collaborators.include?(self.id.to_s)
   end
 
+  def to_param
+    "#{id}-#{name}"
+  end
+
+  def full_name
+    "#{name}  #{second_name}"
+  end
+
   # def User.digest(string)
   #  cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
   #                                                BCrypt::Engine.cost

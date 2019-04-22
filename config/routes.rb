@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     # delete '/logout',  to: 'sessions#destroy'
 
     get '/collaborators/new',      to: 'users#add_collaborator'
+    get '/collaborators',      to: 'users#collaborators'
 
     resources :users
     resources :relatives do
