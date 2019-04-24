@@ -16,7 +16,10 @@ class UsersController < ApplicationController
     @relatives = @user.relatives
   end
 
-  def edit; end
+  def edit
+    @collaborators = @user.collaborators
+    # debugger
+  end
 
   def update
     @user = current_user

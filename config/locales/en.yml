@@ -28,6 +28,8 @@ en:
       edit: 'Edit'
       save: 'Save changes'
       e_pass: 'minimum 6 symbols'
+      toggle_collab: "You don't have collaborators yet"
+      show_collab: 'Show my collaborators'
     new:
       signup: 'Sign up'
       label_text: 'Example: Oleg'

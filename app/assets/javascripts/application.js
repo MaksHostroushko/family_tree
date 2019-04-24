@@ -20,6 +20,7 @@
 //= require lightbox
 //= require trix
 //= require flash
+//= require collaborators
 //= require search
 //= require local-time
 //= require bootstrap-datepicker

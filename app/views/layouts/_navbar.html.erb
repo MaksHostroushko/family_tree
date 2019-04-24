@@ -26,17 +26,17 @@
           <% end %>
             <!-- <li class="nav-item"> -->
               <!-- <div class='row'> -->
+            </ul>
               <span class="<%= 'locale' if I18n.locale == :en %>"><%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'nav-link' %></span>
 
               <span class="<%= 'locale' if I18n.locale == :ua %>"><%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'nav-link' %></span>
               <!-- </div> -->
             <!-- </li> -->
       <!-- </div> -->
-    </ul>
 
     <span class="nav-item dropdown">
       <a class="nav-link dropdown-toggle nav_name" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class=''><%= @user.name || "User" %></span>
+        <span class=''><%= current_user.name || "User" %></span>
       </a>
       <div class="dropdown-menu col-sm" aria-labelledby="dropdownMenuButton">
         <%= link_to t('.settings'), edit_user_path(current_user), class: "dropdown-item nav_nav" %>
@@ -46,8 +46,8 @@
       </div>
     </span>
 
-      <% if @user.image.url.present? %>
-        <%= link_to(image_tag(@user.image.mini.url, width:50, alt: "Img"), edit_user_path(current_user)) %>
+      <% if current_user.image.url.present? %>
+        <%= link_to(image_tag(current_user.image.mini.url, width:50, alt: "Img"), edit_user_path(current_user)) %>
       <% else %>
         <%= link_to(image_tag('empty.png', width: 50), edit_user_path(current_user)) %>
       <% end %>

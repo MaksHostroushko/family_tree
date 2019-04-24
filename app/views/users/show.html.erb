@@ -1,14 +1,18 @@
 <% provide(:title, "#{@user.name} #{@user.second_name}") %>
 <%#= radio_button :user_id, @user.collaborators %>
 
-<div class="text-center">
-  <h1><b><%= @user.name %> <%= @user.second_name %></b></h1>
-</div>
 
-<div>
-    <% if @user.relatives.present? %>
-    <ol>
-      <%= render @relatives %>
-    </ol>
-  <% end %>
-</div>
+  <div class="text-center">
+    <h1><b><%= @user.name %> <%= @user.second_name %></b></h1>
+  </div>
+
+  <div class="col-md-2">
+  </div>
+
+  <div class="users_main col-md-9 row">
+      <% if @user.relatives.present? %>
+        <%= render @relatives %>
+      <% else %>
+        <h2 class="col-10 text-center relat_text"><b><%= t('.text') %></b></h2>
+      <% end %>
+  </div>
