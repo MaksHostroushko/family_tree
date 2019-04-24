@@ -22,6 +22,7 @@
 //= require flash
 //= require collaborators
 //= require search
+//= require zoom
 //= require local-time
 //= require bootstrap-datepicker
 //= require datepicker

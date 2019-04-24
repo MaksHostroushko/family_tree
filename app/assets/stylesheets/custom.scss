@@ -47,12 +47,26 @@ body {
 }
 
 .search-form {
-  width: 300px;
-  margin-left: 20px;
+  // width: 300px;
+  // margin-left: 20px;
 }
 
 .ui-autocomplete-input {
-  margin-left: 24em;
+  margin-left: 16em;
+  // background-color: red !important;
+}
+
+.ui-autocomplete-input-2 {
+  margin-left: 10em;
+}
+
+.ui-autocomplete-input-3 {
+  margin-left: 6em;
+}
+
+.ui-autocomplete-input-4 {
+  margin-left: 2em;
+  max-width: 9em;
 }
 
 .row {
@@ -161,4 +175,9 @@ input {
 
 .btn_rel_new {
   // margin-bottom: 20px;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem .3rem !important;
 }

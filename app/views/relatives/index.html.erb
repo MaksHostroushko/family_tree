@@ -11,7 +11,7 @@
         <%= link_to t(".pedig_btn"), new_category_path, class: 'btn btn-danger btn-sm categ_btn' %>
       <% end %>
     </div>
-    <div class="users_main col-md-9 row">
+    <div class="users_main col-md-10 row">
         <% if @user.relatives.present? %>
           <%= render @relatives %>
         <% else %>
