@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit]
+  caches_action :index
 
   def new; end
 

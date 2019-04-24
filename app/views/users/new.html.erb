@@ -1,7 +1,7 @@
 <% provide(:title, "Sign up") %>
-<h1 class="h_session"><%= t('.signup') %></h1>
+  <h1 class="h_session"><%= t('.signup') %></h1>
 
-    <%= form_for(@user, url: signup_path) do |f| %>
+  <%= form_for(@user, url: signup_path) do |f| %>
     <%= render 'shared/errors' %>
 
     <div class="form-group">
@@ -52,5 +52,5 @@
 
     <p></p>
 
-    <!-- <p class='text-center'>Have account? <%#= link_to "Log in right now!", login_path %></p> -->
-    <% end %>
+  <!-- <p class='text-center'>Have account? <%#= link_to "Log in right now!", login_path %></p> -->
+  <% end %>

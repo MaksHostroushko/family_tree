@@ -1,6 +1,7 @@
 class RelativesController < ApplicationController
   before_action :find_relative, only: [:show, :edit, :update, :destroy]
   before_action :correct_user,   only: [:destroy, :edit, :update]
+  caches_action :index
 
   def index
     @categories = Category.all
