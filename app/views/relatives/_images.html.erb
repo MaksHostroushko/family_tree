@@ -1,14 +1,14 @@
 <div class="left">
 <% if @relative.images.present? %>
   <% @relative.images.each do |picture| %>
-    <% cache(picture) do %>
+    <%# cache(picture) do %>
       <% if @relative.images.first == picture %>
         <%= link_to image_tag(picture.url(:thumb)), asset_url(picture.url(:large)), data: { lightbox: "roadtrip" }, class: 'show_main_image' %>
         <br>
       <% else %>
         <%= link_to image_tag(picture.url(:small)), asset_url(picture.url(:large)), data: { lightbox: "roadtrip" }, class: "show_other_images" %>
       <% end %>
-    <% end %>
+    <%# end %>
   <% end %>
 <% end %>
 </div>

@@ -1,8 +1,8 @@
 <% @collaborators.each do |c| %>
-  <% cache(c) do %>
+  <%# cache(c) do %>
     <% @user = User.find(c) %>
     <%= link_to @user.name, user_path(c) %>
     <%= @user.second_name %>
     <br>
-  <% end %>
+  <%# end %>
 <% end %>
