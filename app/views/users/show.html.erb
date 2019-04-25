@@ -9,7 +9,7 @@
 
   <div class="users_main col-md-9 row">
       <% if @user.relatives.present? %>
-        <%= render @relatives %>
+        <%= render @relatives, cached: true %>
       <% else %>
         <h2 class="col-10 text-center relat_text"><b><%= t('.text') %></b></h2>
       <% end %>

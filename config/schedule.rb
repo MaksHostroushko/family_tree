@@ -15,7 +15,7 @@
 #
 every 1.days do
   # runner "Rails.cache.clear"
-  rake "tmp:cache:clear"
+  # rake "tmp:cache:clear"
 end
 
 # Learn more: http://github.com/javan/whenever
