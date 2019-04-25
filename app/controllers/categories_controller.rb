@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :find_category, only: [:show, :edit, :update, :destroy]
-  caches_action :index
+  # caches_action :index
 
   def index
     @categories = Category.all

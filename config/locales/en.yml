@@ -81,6 +81,12 @@ en:
     error_messages:
       er_text: 'The form contains'
       er: 'errors'
+  user_mailer:
+    send_mail_to_admin:
+      user: 'New user'
+    send_mail_to_user:
+      welcome: 'Welcome to TreeFamily'
+      create: 'Create your family tree with enjoy'     
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"

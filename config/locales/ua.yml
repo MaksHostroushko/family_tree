@@ -81,6 +81,12 @@ ua:
     error_messages:
       er_text: 'Форма містить'
       er: 'помилoк'
+  user_mailer:
+    send_mail_to_admin:
+      user: 'Новий користувач '
+    send_mail_to_user:
+      welcome: 'Вітаємо в TreeFamily'
+      create: 'Створюйте Ваш родовід із задоволенням'
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"
