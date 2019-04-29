@@ -69,6 +69,8 @@ en:
         text_two: "If you didn't request this, please ignore this email."
         text_three: "Your password won't change until you access the link above and create a new one."
         btn_reset: 'Change my password'
+    show:
+      text: 'User not filling information about own family yet'    
   categories:
     new:
       .new_cat: 'New Category'
@@ -86,7 +88,7 @@ en:
       user: 'New user'
     send_mail_to_user:
       welcome: 'Welcome to TreeFamily'
-      create: 'Create your family tree with enjoy'     
+      create: 'Create your family tree with enjoy'
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"
