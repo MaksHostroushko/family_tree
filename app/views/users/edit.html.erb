@@ -1,3 +1,4 @@
+<% provide(:title, "Edit | #{@user.name} #{@user.second_name if @user.second_name.present?}") %>
 <h2 class="text-center"><%= t('.edit') %></h2>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/errors' %>

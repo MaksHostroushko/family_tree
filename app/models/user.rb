@@ -6,8 +6,8 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   attr_accessor :remember_token
 
-  has_many :relatives, dependent: :destroy
-  has_many :categories, dependent: :destroy
+  has_many :relatives, dependent: :nullify
+  has_many :categories, dependent: :nullify
 
   # validates :name, presence: true
   # validates :second_name, presence: true
