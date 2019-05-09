@@ -44,9 +44,9 @@
       <div class="form-group form-collaborators" id="form-all-collab">
         <% if @collaborators.present? %>
           <% @collaborators.each do |c| %>
-            <% @user = User.find(c) %>
-            <%= link_to @user.name, user_path(c) %>
-            <%= link_to @user.second_name, user_path(c) if @user.second_name.present? %>
+            <% user = User.find(c) %>
+            <%= link_to user.name, user_path(c) %>
+            <%= user.second_name if user.second_name.present? %>
             <br>
           <% end %>
         <% else %>
