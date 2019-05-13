@@ -19,24 +19,15 @@
 //= require turbolinks
 //= require lightbox
 //= require trix
+//= require search
 //= require flash
 //= require collaborators
-//= require search
 //= require zoom
+//= require footer
 //= require local-time
 //= require bootstrap-datepicker
 //= require datepicker
 
 $(document).on('turbolinks:load', function() {
     lightbox.init();
-});
-
-$(document).on('turbolinks:load', function() {
-  let docHeight = $(window).height();
-  let footerHeight = $('.footer').height();
-  let footerTop = $('.footer').position().top + footerHeight;
-
-  if (footerTop < docHeight) {
-    $(".footer").addClass('fixed-bottom container-fluid col-12');
-  }
 });

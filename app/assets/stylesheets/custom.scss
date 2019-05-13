@@ -52,20 +52,15 @@ body {
   // margin-left: 20px;
 }
 
-.ui-autocomplete-input {
-  margin-left: 16em;
-  // background-color: red !important;
-}
-
-.ui-autocomplete-input-2 {
+.custom-search-autocomplete-2 {
   margin-left: 10em;
 }
 
-.ui-autocomplete-input-3 {
+.custom-search-autocomplete-3 {
   margin-left: 6em;
 }
 
-.ui-autocomplete-input-4 {
+.custom-search-autocomplete-4 {
   margin-left: 2em;
   max-width: 9em;
 }
@@ -136,7 +131,7 @@ body {
 }
 
 .search_form {
-  margin-right: 4.5em;
+  // margin-right: 4.5em;
 }
 
 .dropdown-menu {
@@ -211,3 +206,15 @@ input {
 //   border-bottom: 0;
 //   border-left: 0.3em solid transparent;
 // }
+
+.search-margin-1 {
+  margin-right: 10em;
+}
+
+.search-margin-2 {
+  margin-right: 6em;
+}
+
+.search-margin-3 {
+  margin-right: 2em;
+}
