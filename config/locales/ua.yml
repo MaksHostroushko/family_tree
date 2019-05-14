@@ -18,13 +18,13 @@ ua:
       submit: 'Готово'
     index:
       text: 'Почніть заповнювати інформацію про рідних прямо зараз'
-      no_categ: 'Родоводи ще створено'
+      no_categ: 'Родовід ще створено'
       pedig_btn: 'Новий рід'
     relative:
       edit: 'Редагувати'
       delete: 'Видалити'
     new:
-      new_relat: 'Новий родич'  
+      new_relat: 'Новий родич'
   users:
     edit:
       edit: 'Редагування'
