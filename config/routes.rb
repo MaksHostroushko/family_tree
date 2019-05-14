@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   ActiveAdmin.routes(self)
 
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
@@ -20,9 +20,10 @@ Rails.application.routes.draw do
     get '/collaborators',      to: 'users#collaborators'
 
     resources :users
+    resources :categories
+    resources :authentications, only: [:destroy]
     resources :relatives do
       resources :categories
     end
-    resources :categories
   end
 end

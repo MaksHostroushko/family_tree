@@ -288,4 +288,6 @@ Devise.setup do |config|
   #   include Turbolinks::Controller
   # end
   config.scoped_views = true
+
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'email'
 end
