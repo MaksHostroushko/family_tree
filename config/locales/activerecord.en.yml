@@ -64,7 +64,7 @@ en:
   #Controllers
   relatives:
     create:
-      save: 'Relative create.Admin check your relative'
+      save: 'Relative success created and published'
     update:
       edit: 'Relative information update'
     destroy:
