@@ -39,7 +39,7 @@
         <span class=''><%= current_user.name || "User" %></span>
       </a>
       <div class="dropdown-menu col-sm" aria-labelledby="dropdownMenuButton">
-        <%= link_to t('.settings'), edit_user_path(current_user), class: "dropdown-item nav_nav" %>
+        <%= link_to t('.settings'), edit_user_registration_path, class: "dropdown-item nav_nav" %>
         <hr>
         <%= link_to t('.logout'),  destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         <%= link_to "Collaborators", collaborators_path, class: "dropdown-item" %>
@@ -47,9 +47,9 @@
     </span>
 
       <% if current_user.image.url.present? %>
-        <%= link_to(image_tag(current_user.image.mini.url, width:50, alt: "Img"), edit_user_path(current_user)) %>
+        <%= link_to(image_tag(current_user.image.mini.url, width:50, alt: "Img"), edit_user_registration_path) %>
       <% else %>
-        <%= link_to(image_tag('empty.png', width: 50), edit_user_path(current_user)) %>
+        <%= link_to(image_tag('empty.png', width: 50), edit_user_registration_path) %>
       <% end %>
 
     <% elsif %>
