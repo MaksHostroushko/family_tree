@@ -23,6 +23,8 @@ ua:
         image: 'Зображення'
         password: 'Пароль*'
         password_confirmation: 'Підтвердження*'
+      categories:
+        name: "Ім'я*"
   errors:
     format: "%{attribute} %{message}"
     messages:

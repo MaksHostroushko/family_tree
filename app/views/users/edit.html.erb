@@ -1,4 +1,4 @@
-<% provide(:title, "Edit | #{@user.name} #{@user.second_name if @user.second_name.present?}") %>
+<% provide(:title, "#{t('.edit')} | #{@user.name} #{@user.second_name if @user.second_name.present?}") %>
 <h2 class="text-center"><%= t('.edit') %></h2>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/errors' %>
@@ -45,8 +45,11 @@
         <% if @collaborators.present? %>
           <% @collaborators.each do |c| %>
             <% user = User.find(c) %>
-            <%= link_to user.name, user_path(c) %>
-            <%= user.second_name if user.second_name.present? %>
+
+            <%= link_to user_path(c) do %>
+              <%= user.name %>
+              <%= user.second_name if user.second_name.present? %>
+            <% end %>
             <br>
           <% end %>
         <% else %>

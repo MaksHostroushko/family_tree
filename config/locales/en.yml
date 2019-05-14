@@ -23,6 +23,7 @@ en:
     relative:
       edit: 'Edit'
       delete: 'Delete'
+    new_relat: 'New relative'  
   users:
     edit:
       edit: 'Edit'
@@ -70,10 +71,10 @@ en:
         text_three: "Your password won't change until you access the link above and create a new one."
         btn_reset: 'Change my password'
     show:
-      text: 'User not filling information about own family yet'    
+      text: 'User not filling information about own family yet'
   categories:
     new:
-      .new_cat: 'New Category'
+      new_cat: 'New Category'
     form:
       create: 'Create category'
   shared:

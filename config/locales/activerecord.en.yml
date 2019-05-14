@@ -23,6 +23,8 @@ en:
         image: 'Image'
         password: 'Password*'
         password_confirmation: 'Password confirmation*'
+      categories:
+        name: 'Name*'  
   errors:
     format: "%{attribute} %{message}"
     messages:
