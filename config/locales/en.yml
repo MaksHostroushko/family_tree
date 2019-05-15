@@ -23,13 +23,12 @@ en:
     relative:
       edit: 'Edit'
       delete: 'Delete'
-    new_relat: 'New relative'  
+    new_relat: 'New relative'
   users:
     edit:
       edit: 'Edit'
       save: 'Save changes'
       e_pass: 'minimum 6 symbols'
-      toggle_collab: "You don't have collaborators yet"
       show_collab: 'Show my collaborators'
     new:
       signup: 'Sign up'
@@ -59,6 +58,8 @@ en:
       new:
         signup: 'Sign up'
         signup_btn: 'Sign up'
+      edit:
+        toggle_collab: "You don't have collaborators yet"
     passwords:
       new:
         forgot: 'Forgot your password?'
