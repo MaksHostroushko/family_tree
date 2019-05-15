@@ -41,25 +41,26 @@ class UsersController < ApplicationController
 
   def add_collaborator
     @user = current_user
-    # @user = current_user.collaborators.push
+    @users = @user.following
   end
 
   def collaborators
     @user = current_user
     @collaborators = @user.collaborators
+    @users = @user.following
   end
 
   def following
     @title = "Following"
     @user = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page])
+    @users = @user.following
     render 'show_follow'
   end
 
   def followers
     @title = "Followers"
     @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers
     render 'show_follow'
   end
 

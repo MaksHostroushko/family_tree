@@ -4,7 +4,7 @@
 <% if @users.any? %>
   <div class="">
     <% @users.each do |user| %>
-      <%= link_to (image_tag user.image.url(:small) ), user %>
+      <%= link_to (image_tag user.image.url(:small) ), user if user.image.present? %>
     <% end %>
   </div>
 <% end %>
