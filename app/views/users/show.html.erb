@@ -1,7 +1,7 @@
 <% provide(:title, "#{@user.name} #{@user.second_name}") %>
 <%#= radio_button :user_id, @user.collaborators %>
   <div class="text-center">
-    <h1><b><%= @user.name %> <%= @user.second_name %></b></h1>
+    <h1><b><%= @user.name %> <%= @user.second_name %></b></h1><%= render "follow_form" if logged_in? %>
   </div>
 
   <div class="col-md-2">
