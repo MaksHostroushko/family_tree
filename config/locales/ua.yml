@@ -55,12 +55,15 @@ ua:
         forgot: 'Забули пароль?'
         confirm_inform: 'Не отримали інструкцій із підтвердженням?'
         unlock_inf: 'Не отримали інструкції з розблокування?'
+      stats:
+        following: підписок
+        followers: підписників
     registrations:
       new:
         signup: 'Реєстрація'
         signup_btn: 'Зареєструватись'
       edit:
-        toggle_collab: "Ви ще не маєте колабораторів"  
+        toggle_collab: "Ви ще не маєте колабораторів"
     passwords:
       new:
         forgot: 'Забули пароль?'
@@ -74,6 +77,12 @@ ua:
         btn_reset: 'Змінити пароль'
     show:
       text: 'Користувач ще не заповнив інформацію про своїх рідних'
+    follow:
+      add_follow: Додати до колабораторів
+    unfollow:
+      rmv_follow: Видалити із колабораторів
+    collaborators:
+      empty_collab: Користувач ще не має колабораторів
   categories:
     new:
       new_cat: 'Нова категорія'

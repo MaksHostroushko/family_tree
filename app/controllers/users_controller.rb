@@ -41,12 +41,27 @@ class UsersController < ApplicationController
 
   def add_collaborator
     @user = current_user
-    # @user = current_user.collaborators.push
+    @users = @user.following
   end
 
   def collaborators
     @user = current_user
     @collaborators = @user.collaborators
+    @users = @user.following
+  end
+
+  def following
+    @title = t(".following")
+    @user = User.find(params[:id])
+    @users = @user.following
+    render 'show_follow'
+  end
+
+  def followers
+    @title = t(".followers")
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follow'
   end
 
   private
