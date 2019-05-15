@@ -54,6 +54,9 @@ en:
         forgot: 'Forgot your password?'
         confirm_inform: "Didn't receive confirmation instructions?"
         unlock_inf: "Didn't receive unlock instructions?"
+      stats:
+        following: following
+        followers: followers  
     registrations:
       new:
         signup: 'Sign up'
@@ -73,6 +76,12 @@ en:
         btn_reset: 'Change my password'
     show:
       text: 'User not filling information about own family yet'
+    follow:
+      add_follow: Add to collaborate
+    unfollow:
+      rmv_follow: Remove from collaborators
+    collaborators:
+      empty_collab: User not have collaborators yet
   categories:
     new:
       new_cat: 'New Category'

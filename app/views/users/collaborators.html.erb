@@ -1,20 +1,13 @@
-<h1><%= @user.full_name %></h1>
-<%#= link_to "view my profile", @user %>
-
-<% if @users.present? %>
-  <div class="">
-    <% @users.each do |user| %>
-      <%= link_to (image_tag user.image.url(:small) ), user if user.image.present? %>
-    <% end %>
-  </div>
-<% end %>
-<div class="col-md-8">
-  <h3><%= @title %></h3>
+<h1 class="text-center"><%= @user.full_name %></h1>
+<div class="text-center">
+  <%= render 'users/shared/stats' %>
+</div>
+<div class="users_main col-md-10 row">
   <% if @users.present? %>
-    <ul class="users follow">
-      <%= render @users %>
-    </ul>
+    <%= render @users %>
+  <% else %>
+    <div class="empty_collab">
+      <h2><%= t('.empty_collab') %></h2>
+    </div>
   <% end %>
 </div>
-
-<%= render 'users/shared/stats' %>

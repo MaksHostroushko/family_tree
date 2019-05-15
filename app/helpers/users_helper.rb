@@ -13,4 +13,12 @@ module UsersHelper
      redirect_to root_path
    end
  end
+
+  def image_present
+    if @user.image.present?
+      link_to (image_tag @user.image.url(:small) ), user_path(@user)
+    else
+      link_to (image_tag 'empty.png', width: 152 ), user_path(@user)
+    end
+  end
 end
