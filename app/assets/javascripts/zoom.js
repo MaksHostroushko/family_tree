@@ -16,31 +16,24 @@ function checkZoom() {
     $('.navbar-link-all-users').removeClass("search-margin-2")
     $('.navbar-link-all-users').removeClass("search-margin-3")
     $('.navbar-link-all-users').removeClass("search-margin-4")
-    // $('#navbarDropdown').removeClass("nav_name_2");
   } else if (browserZoomLevel > 100 && browserZoomLevel <= 110) {
     $('.navbar-link-all-users').addClass("search-margin-2")
     $('.navbar-link-all-users').removeClass("search-margin-1-1")
     $('.navbar-link-all-users').removeClass("search-margin-1")
     $('.navbar-link-all-users').removeClass("search-margin-3")
     $('.navbar-link-all-users').removeClass("search-margin-4")
-    // $('#navbarDropdown').removeClass("nav_name");
-    // $('#navbarDropdown').removeClass("nav_name_2");
   } else if (browserZoomLevel > 110 && browserZoomLevel <= 150) {
     $('.navbar-link-all-users').addClass("search-margin-3")
     $('.navbar-link-all-users').removeClass("search-margin-1")
     $('.navbar-link-all-users').removeClass("search-margin-2")
     $('.navbar-link-all-users').removeClass("search-margin-4")
     $('.navbar-link-all-users').removeClass("search-margin-1-1")
-    // $('#navbarDropdown').removeClass("nav_name");
-    // $('#navbarDropdown').addClass("nav_name_2");
   } else if (browserZoomLevel > 150 ) {
     $('.navbar-link-all-users').addClass("search-margin-4")
     $('.navbar-link-all-users').removeClass("search-margin-1")
     $('.navbar-link-all-users').removeClass("search-margin-2")
     $('.navbar-link-all-users').removeClass("search-margin-3")
     $('.navbar-link-all-users').removeClass("search-margin-1-1")
-    // $('#navbarDropdown').removeClass("nav_name");
-    // $('#navbarDropdown').addClass("nav_name_2");
   } else {
     $('.navbar-link-all-users').removeClass("search-margin-4")
     $('.navbar-link-all-users').removeClass("search-margin-1")
@@ -48,7 +41,5 @@ function checkZoom() {
     $('.navbar-link-all-users').removeClass("search-margin-3")
     $('.navbar-link-all-users').removeClass("search-margin-1-1")
     $('.navbar-link-all-users').addClass("search-margin")
-    // $('#navbarDropdown').removeClass("nav_name");
-    // $('#navbarDropdown').addClass("nav_name_2");
   }
 };
