@@ -23,6 +23,7 @@ ua:
         image: 'Зображення'
         password: 'Пароль*'
         password_confirmation: 'Підтвердження*'
+        current_password: Поточний пароль
       categories:
         name: "Ім'я*"
   errors:

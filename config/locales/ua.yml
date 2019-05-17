@@ -10,6 +10,7 @@ ua:
       login: 'Вхід'
       signup: 'Реєстрація'
       all_us: 'Усі користувачі'
+      collabs: Колаборатори
   relatives:
     categories_index:
       find: 'Пошук'
@@ -64,6 +65,12 @@ ua:
         signup_btn: 'Зареєструватись'
       edit:
         toggle_collab: "Ви ще не маєте колабораторів"
+        edit: Редагування профілю користувача
+        acc_set: Налаштування акаунта
+        e_pass: 'символів мінімум'
+        text: для підтвердження змін нам потрібен ваш поточний пароль
+        change: залиште порожнім, якщо ви не хочете його змінювати
+        update: Обновити
     passwords:
       new:
         forgot: 'Забули пароль?'
@@ -83,6 +90,8 @@ ua:
       rmv_follow: Видалити із колабораторів
     collaborators:
       empty_collab: Користувач ще не має колабораторів
+    show_follow:
+      my_collab: Мої колаборатори
   categories:
     new:
       new_cat: 'Нова категорія'

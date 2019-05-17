@@ -10,6 +10,7 @@ en:
       login: 'Log in'
       signup: 'Sign up'
       all_us: 'All users'
+      collabs: Collaborators
   relatives:
     categories_index:
       find: 'Find'
@@ -56,13 +57,19 @@ en:
         unlock_inf: "Didn't receive unlock instructions?"
       stats:
         following: following
-        followers: followers  
+        followers: followers
     registrations:
       new:
         signup: 'Sign up'
         signup_btn: 'Sign up'
       edit:
         toggle_collab: "You don't have collaborators yet"
+        edit: Edit user account
+        acc_set: Account Settings
+        e_pass: characters minimum
+        text: we need your current password to confirm your changes
+        change: leave blank if you don't want to change it
+        update: Update
     passwords:
       new:
         forgot: 'Forgot your password?'
@@ -82,6 +89,8 @@ en:
       rmv_follow: Remove from collaborators
     collaborators:
       empty_collab: User not have collaborators yet
+    show_follow:
+      my_collab: My collaborators
   categories:
     new:
       new_cat: 'New Category'
