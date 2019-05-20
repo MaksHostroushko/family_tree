@@ -8,13 +8,13 @@ class RelativesController < ApplicationController
     @user = current_user
     @relatives = @user.relatives.order(:first_name).page(params[:page]) if @user.present?
     @relatives = @relatives.where(id: CategoryRelative.where(category_id: params[:filter]).pluck(:relative_id)).page(params[:page]) if params[:filter].present?
-    @relatives = Relative.search(params[:search]).order(created_at: :asc).page(params[:page]) if params[:search]
-
-    respond_to do |format|
-      format.html
-      # format.js
-      format.json { render json: @relatives.pluck(:first_name) } if @relatives.present?
-    end
+    # @relatives = Relative.search(params[:search]).order(created_at: :asc).page(params[:page]) if params[:search]
+    #
+    # respond_to do |format|
+    #   format.html
+    #   # format.js
+    #   format.json { render json: @relatives.pluck(:first_name) } if @relatives.present?
+    # end
   end
 
   def new

@@ -13,7 +13,7 @@ class Relative < ApplicationRecord
 
   paginates_per 9
 
-  def self.search(search)
-    where("first_name LIKE ?", "%#{search}%")
-  end
+  # def self.search(search)
+  #   where("first_name LIKE ?", "%#{search}%")
+  # end
 end

@@ -11,6 +11,13 @@ class UsersController < ApplicationController
   def index
     @users = User.order(:name).page(params[:page])
     @user = current_user
+    @users = User.search(params[:search]).order(created_at: :asc).page(params[:page]) if params[:search]
+
+    respond_to do |format|
+      format.html
+      # format.js
+      format.json { render json: @users.pluck(:name) } if @users.present?
+    end
   end
 
   def show

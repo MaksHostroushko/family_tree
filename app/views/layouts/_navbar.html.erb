@@ -13,7 +13,7 @@
             <%= link_to t('.new_rel'), new_relative_path, class: 'navbar_link' %>
             <%= link_to t('.all_us'), users_path, class: 'navbar_link navbar-link-all-users'  %>
           <!-- </li> -->
-            <%= form_tag relatives_path, method: :get, class: "form-inline my-4 my-lg-0 search_form" do %>
+            <%= form_tag users_path, method: :get, class: "form-inline my-4 my-lg-0 search_form" do %>
             <%= text_field_tag(
             :search,
             params[:search],

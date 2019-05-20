@@ -26,8 +26,11 @@ class User < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  paginates_per 9
+  paginates_per 20
 
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%")
+  end
 
   def collaboration?(relative)
     relative.user.collaborators.include?(self.id.to_s)
