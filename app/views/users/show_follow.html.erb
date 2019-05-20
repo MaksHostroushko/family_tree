@@ -4,7 +4,7 @@
 
 <div class="users_main col-md-10 row">
   <% if @users.present? %>
-    <%= render @users %>
+    <%= render @users, cache: true %>
   <% else %>
     Sorry
   <% end %>

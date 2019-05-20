@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-2">
       <% if @user.categories.present? %>
-        <%= render 'categories_index' %>
+        <%= render 'categories_index', cache: true %>
       <% else %>
       <div class="categ_text">
         <span class=""><%= t('.no_categ') %></span>
@@ -13,7 +13,7 @@
     </div>
     <div class="users_main col-md-10 row">
         <% if @user.relatives.present? %>
-          <%= render @relatives %>
+          <%= render @relatives, cache: true %>
           <%#= render 'relatives/relative' %>
         <% else %>
           <h2 class="col-10 text-center relat_text"><b><%= t('.text') %></b></h2>

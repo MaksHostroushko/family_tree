@@ -3,7 +3,7 @@ ua:
     navbar:
       all_rel: 'Усі родичі'
       new_rel: 'Новий родич'
-      search: 'Приклад: Ігор Потапко' 
+      search: 'Приклад: Ігор Потапко'
       profile: 'Профіль'
       settings: 'Налаштування'
       logout: 'Вихід'
@@ -41,6 +41,7 @@ ua:
       new_ac: 'Створити новий акаунт'
     index:
       text: 'Усі користувачі'
+      not_found: На жаль, нікого не знайдено
     sessions:
       new:
         login: 'Вхід'

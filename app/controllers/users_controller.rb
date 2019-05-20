@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @relatives = @user.relatives
+    @relatives = @user.relatives.page(params[:page])
   end
 
   def edit

@@ -15,8 +15,9 @@
 
   <div class="users_main col-md-9 row">
       <% if @user.relatives.present? %>
-        <%= render @relatives %>
+        <%= render @relatives, cache: true %>
       <% else %>
         <h2 class="col-10 text-center user_relations"><b><%= t('.text') %></b></h2>
       <% end %>
   </div>
+  <%= paginate @relatives %>

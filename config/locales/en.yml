@@ -3,7 +3,7 @@ en:
     navbar:
       all_rel: 'All relative'
       new_rel: 'New relative'
-      search: 'e.g: Igor Potapko' 
+      search: 'e.g: Igor Potapko'
       profile: 'Profile'
       settings: 'Settings'
       logout: 'Log out'
@@ -40,6 +40,7 @@ en:
       new_ac: 'Create new account'
     index:
       text: 'All users'
+      not_found: Sorry, not found anybody
     sessions:
       new:
         login: 'Log in'
