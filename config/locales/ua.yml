@@ -3,7 +3,7 @@ ua:
     navbar:
       all_rel: 'Усі родичі'
       new_rel: 'Новий родич'
-      search: 'Пошук'
+      search: 'Приклад: Ігор Потапко' 
       profile: 'Профіль'
       settings: 'Налаштування'
       logout: 'Вихід'

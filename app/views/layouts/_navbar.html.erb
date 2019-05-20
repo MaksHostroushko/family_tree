@@ -41,6 +41,7 @@
       <div class="dropdown-menu col-sm" aria-labelledby="dropdownMenuButton">
         <%= link_to t('.settings'), edit_user_registration_path, class: "dropdown-item nav_nav" %>
         <%= link_to t(".collabs"), collaborators_path, class: "dropdown-item" %>
+        <hr>
         <%= link_to t('.logout'),  destroy_user_session_path, method: :delete, class: "dropdown-item" %>
       </div>
     </span>

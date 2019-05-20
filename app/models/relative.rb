@@ -11,9 +11,5 @@ class Relative < ApplicationRecord
 
   mount_uploaders :images, ImageUploader
 
-  paginates_per 9
-
-  # def self.search(search)
-  #   where("first_name LIKE ?", "%#{search}%")
-  # end
+  paginates_per 12
 end

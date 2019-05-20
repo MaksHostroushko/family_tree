@@ -6,7 +6,7 @@ class RelativesController < ApplicationController
   def index
     @categories = Category.all
     @user = current_user
-    @relatives = @user.relatives.order(:first_name).page(params[:page]) if @user.present?
+    @relatives = @user.relatives.order(created_at: :desc).page(params[:page]) if @user.present?
     @relatives = @relatives.where(id: CategoryRelative.where(category_id: params[:filter]).pluck(:relative_id)).page(params[:page]) if params[:filter].present?
     # @relatives = Relative.search(params[:search]).order(created_at: :asc).page(params[:page]) if params[:search]
     #

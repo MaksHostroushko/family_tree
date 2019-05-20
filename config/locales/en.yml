@@ -3,7 +3,7 @@ en:
     navbar:
       all_rel: 'All relative'
       new_rel: 'New relative'
-      search: 'Search'
+      search: 'e.g: Igor Potapko' 
       profile: 'Profile'
       settings: 'Settings'
       logout: 'Log out'
