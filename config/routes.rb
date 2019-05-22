@@ -19,16 +19,17 @@ Rails.application.routes.draw do
     get '/collaborators/new',      to: 'users#add_collaborator'
     get '/collaborators',      to: 'users#collaborators'
 
+    resources :categories
+    resources :authentications, only: [:destroy]
+    resources :relationships,  only: [:create, :destroy]
+    resources :pages
     resources :users do
       member do
         get :following, :followers
       end
     end
-    resources :categories
-    resources :authentications, only: [:destroy]
     resources :relatives do
       resources :categories
     end
-    resources :relationships,  only: [:create, :destroy]
   end
 end

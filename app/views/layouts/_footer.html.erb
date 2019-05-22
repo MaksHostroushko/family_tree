@@ -9,7 +9,19 @@
       <div class="mr-auto">
       </div>
 
-      <div class="float-right">
+      <div class="col-md-4">
+        <% @pages.each do |page| %>
+          <%== link_to page.title, page_path(page) %>
+        <% end %>
+      </div>
+
+      <div class="col-md-4">
+        makshostroyshko@gmail.com
+        <br>
+        makshostroyshko@gmail.com
+      </div>
+
+      <div class="float-right col-md-4">
         <%= image_tag 'facebook.jpg', width: 100 %>
         <br>
         <span class="copyright"> Copyright &copy; <%= copyright_notice_year_range(2019) %> Family Tree - All rights reserved </span>
