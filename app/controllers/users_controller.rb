@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html
       # format.js
-      format.json { render json: @users.pluck(:name) } if @users.present?
+      format.json { render json: @users.pluck(:second_name) } if @users.present?
     end
   end
 

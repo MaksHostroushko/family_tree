@@ -29,7 +29,7 @@ class User < ApplicationRecord
   paginates_per 20
 
   def self.search(search)
-    where("name LIKE ?", "%#{search}%")
+    where("name || second_name ILIKE ?", "%#{search}%")
   end
 
   def collaboration?(relative)
