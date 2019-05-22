@@ -1,15 +1,22 @@
-ActiveAdmin.register Page do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-permit_params :pages, :of, :title, :body
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+ActiveAdmin.register Page, as: "Footer_pages" do
+  permit_params :page, :of, :title, :body, :slug
 
+  form title: 'A custom title' do |f|
+      inputs 'Details' do
+        input :title
+        input :body, as: :html_editor
+        input :slug
+      end
+      actions
+    end
+
+  controller do
+    def find_resource
+      begin
+        scoped_collection.where(slug: params[:id]).first!
+      rescue ActiveRecord::RecordNotFound
+        scoped_collection.find(params[:id])
+      end
+    end
+  end
 end
