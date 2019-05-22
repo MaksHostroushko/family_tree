@@ -6,6 +6,8 @@
   <% if @users.present? %>
     <%= render @users, cache: true %>
   <% else %>
-    Sorry
+    <div class="show-follow-text">
+      <h3><%= t('.no_collab') %></h3>
+    </div>
   <% end %>
 </div>

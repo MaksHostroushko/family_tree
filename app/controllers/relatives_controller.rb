@@ -30,7 +30,6 @@ class RelativesController < ApplicationController
       flash[:success] = t('.save')
     else
       render 'new'
-      flash[:danger] = "Sorry,problem"
     end
   end
 

@@ -93,6 +93,7 @@ ua:
       empty_collab: Користувач ще не має колабораторів
     show_follow:
       my_collab: Мої колаборатори
+      no_collab: Ще жоден користувач не додав Вас до колабораторів
   categories:
     new:
       new_cat: 'Нова категорія'

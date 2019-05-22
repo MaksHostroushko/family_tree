@@ -92,6 +92,7 @@ en:
       empty_collab: User not have collaborators yet
     show_follow:
       my_collab: My collaborators
+      no_collab: Sorry, but nobody not added you to collaborators
   categories:
     new:
       new_cat: 'New Category'
