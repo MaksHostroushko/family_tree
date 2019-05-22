@@ -7,14 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # AdminUser.create!(email: 'makshostroyshko@gmail.com', password: 'qwerty', password_confirmation: 'qwerty') if Rails.env.development?
 #
-10.times do
-  Relative.create!(first_name: Faker::Name.first_name, second_name: Faker::Name.last_name , born: '05/14/1998', description: Faker::TvShows::Simpsons.quote, user_id: 10)
+50.times do
+  Relative.create!(first_name: Faker::Name.first_name, second_name: Faker::Name.last_name , born: '05/14/1998', description: Faker::Lorem.words(rand(25..100)), user_id: 39)
 end
 
-20.times do
-  User.create!(name: Faker::Name.first_name, second_name: Faker::Name.last_name, email: Faker::Internet.email, password: 'qwerty', password_confirmation: 'qwerty', provider: nil, uid: nil)
-end
-
-10.times do
-  Category.create!(name: Faker::Coffee.variety, user_id: 10)
-end
+# 50.times do
+#   User.create!(name: Faker::Name.first_name, second_name: Faker::Name.last_name, email: Faker::Internet.email, password: 'qwerty', password_confirmation: 'qwerty', provider: nil, uid: nil)
+# end
+#
+# 10.times do
+#   Category.create!(name: Faker::Coffee.variety, user_id: 39)
+# end
