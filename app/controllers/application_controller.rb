@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
  end
 
  def set_pages
-   @pages = Page.all.page(params[:page]).per(10)
+   @pages = Page.all
  end
 
  protected

@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :authentications, only: [:destroy]
     resources :relationships,  only: [:create, :destroy]
-    resources :pages, only: [:show, :index]
+    resources :pages, only: :show
     resources :users do
       member do
         get :following, :followers
