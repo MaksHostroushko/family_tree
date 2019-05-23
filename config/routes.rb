@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'emails/new'
+  get 'emails/create'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }
   ActiveAdmin.routes(self)
 
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :authentications, only: [:destroy]
     resources :relationships,  only: [:create, :destroy]
+    resources :emails,  only: :create
     resources :pages, only: :show
     resources :users do
       member do

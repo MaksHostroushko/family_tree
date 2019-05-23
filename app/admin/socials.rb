@@ -1,4 +1,4 @@
-ActiveAdmin.register Social do
+ActiveAdmin.register Social, as: "Social_links" do
 permit_params :social, :of, :title, :body, :image
 
 form title: 'A custom title' do |f|
@@ -32,10 +32,10 @@ form title: 'A custom title' do |f|
     column :image do |social|
       div do
         if social.image.present?
-          image_tag(social.image.mini.url)
+          image_tag(social.image.mini.url).first!
         end
       end
+      actions
     end
-    actions
   end
 end
