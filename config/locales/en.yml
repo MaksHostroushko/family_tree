@@ -108,9 +108,16 @@ en:
   user_mailer:
     send_mail_to_admin:
       user: 'New user'
+      text: You have a new email
+      from: From
+      body: body
     send_mail_to_user:
       welcome: 'Welcome to TreeFamily'
       create: 'Create your family tree with enjoy'
+  emails:
+    new:
+      text: If you have some problems or questions about site - writing and send this message.
+      submit: Send email
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"

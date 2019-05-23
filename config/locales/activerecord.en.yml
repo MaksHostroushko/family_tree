@@ -26,6 +26,8 @@ en:
         current_password: Current password
       categories:
         name: 'Name*'
+      email:
+        body: Body
   errors:
     format: "%{attribute} %{message}"
     messages:
@@ -87,3 +89,7 @@ en:
       edit: 'Category update'
     destroy:
       delete: 'Category removed'
+  emails:
+    create:
+      flash_success: Thank you for your message. We respond to you in the near future
+      flash_danger: Message not sended

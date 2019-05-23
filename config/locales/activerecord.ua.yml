@@ -26,6 +26,8 @@ ua:
         current_password: Поточний пароль
       categories:
         name: "Ім'я*"
+      email:
+        body: Повідомлення
   errors:
     format: "%{attribute} %{message}"
     messages:
@@ -96,3 +98,7 @@ ua:
       edit: 'Категорію оновлено'
     destroy:
       delete: 'Категорію видалено'
+  emails:
+    create:
+      flash_success: Повідомлення відправлено. Ми відповімо Вам у найближчий час.
+      flash_danger: Повідомлення не відправлено.  

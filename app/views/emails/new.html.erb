@@ -1,7 +1,19 @@
 <%= form_for @email do |f| %>
 
-  <%= f.label :body %>
-  <%= f.text_field :body %>
+<div class="col-lg-6 center-block form_create">
+  <br>
 
-  <%= f.submit %>
+  <h5><%= t(".text") %></h5>
+
+  <br>
+
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.trix_editor :body, class: 'form-control-custom' %>
+  </div>
+
+  <div class="text-center">
+    <%= f.submit t(".submit"), class: 'btn btn-success' %>
+  </div>
+</div>
 <% end %>
