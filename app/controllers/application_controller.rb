@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_pages
+  before_action :set_socials
   protect_from_forgery with: :null_session
 
   private
@@ -25,6 +26,10 @@ class ApplicationController < ActionController::Base
 
  def set_pages
    @pages = Page.all
+ end
+
+ def set_socials
+   @socials = Social.all
  end
 
  protected

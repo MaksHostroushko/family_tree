@@ -48,7 +48,5 @@ form title: 'A custom title' do |f|
       row :created_at
       row :updated_at
     end
-    # active_admin_comments
-end
-
+  end
 end

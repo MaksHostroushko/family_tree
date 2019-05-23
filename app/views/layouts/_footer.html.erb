@@ -18,9 +18,13 @@
       </div>
 
       <div class="col-md-4">
-        makshostroyshko@gmail.com
-        <br>
-        makshostroyshko@gmail.com
+        <% @socials.each do |social| %>
+          <% cache(social) do %>
+            <%= link_to social.body, target: "_blank" do %>
+              <%= image_tag "#{social.image.mini.url}" if social.image.present? %>
+            <% end %>
+          <% end %>
+        <% end %>
       </div>
 
       <div class="float-right col-md-4">
