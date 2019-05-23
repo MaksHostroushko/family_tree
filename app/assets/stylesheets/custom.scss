@@ -135,7 +135,7 @@ body {
 }
 
 .dropdown-menu {
-  min-width: 11rem !important;
+  min-width: 11.5em !important;
 }
 
 .locale {
@@ -220,7 +220,7 @@ input {
 }
 
 .search-margin-3 {
-  margin-right: 2em;
+  margin-right: 1.2em;
 }
 
 .search-margin-4 {
@@ -250,3 +250,7 @@ input {
     border-color: #d6e9c6;
     color: #468847;
     text-align: center; }
+
+.user-image-navbar {
+  margin-right: 30px;
+}
