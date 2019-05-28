@@ -24,6 +24,7 @@
 //= require collaborators
 //= require zoom
 //= require footer
+//= require relatives
 //= require local-time
 //= require bootstrap-datepicker
 //= require datepicker

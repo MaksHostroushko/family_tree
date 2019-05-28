@@ -17,6 +17,7 @@ en:
       new: 'New family'
     form:
       submit: 'Ready'
+      show: Show categories
     index:
       text: 'Start filling out your family information right now'
       no_categ: 'Pedigrees have not yet been created'
