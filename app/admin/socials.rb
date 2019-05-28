@@ -32,10 +32,10 @@ form title: 'A custom title' do |f|
     column :image do |social|
       div do
         if social.image.present?
-          image_tag(social.image.mini.url).first!
+          image_tag(social.image.mini.url)
         end
       end
-      actions
     end
+    actions
   end
 end

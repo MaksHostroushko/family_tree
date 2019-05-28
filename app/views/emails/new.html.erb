@@ -1,4 +1,5 @@
 <%= form_for @email do |f| %>
+<%= render "shared/email_errors", object: @email %>
 
 <div class="col-lg-6 center-block form_create">
   <br>

@@ -20,4 +20,4 @@
         <h2 class="col-10 text-center user_relations"><b><%= t('.text') %></b></h2>
       <% end %>
   </div>
-  <%= paginate @relatives %>
+  <%= paginate @relatives, cache: true %>

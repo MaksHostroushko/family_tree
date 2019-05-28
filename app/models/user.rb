@@ -37,7 +37,7 @@ class User < ApplicationRecord
   end
 
   def to_param
-    "#{id}-#{name}"
+    "#{id}-#{name}-#{second_name}"
   end
 
   def full_name

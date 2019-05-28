@@ -7,20 +7,18 @@
       <div class="categ_text">
         <span class=""><%= t('.no_categ') %></span>
       </div>
-        <!-- <br> -->
         <%= link_to t(".pedig_btn"), new_category_path, class: 'btn btn-danger btn-sm categ_btn' %>
       <% end %>
     </div>
     <div class="users_main col-md-10 row">
         <% if @user.relatives.present? %>
           <%= render @relatives, cache: true %>
-          <%#= render 'relatives/relative' %>
         <% else %>
           <h2 class="col-10 text-center relat_text"><b><%= t('.text') %></b></h2>
         <% end %>
     </div>
   </div>
-  <%= paginate @relatives %>
+  <%= paginate @relatives, cache: true %>
 <% else %>
   <%= render template: 'users/sessions/new' %>
 <% end %>

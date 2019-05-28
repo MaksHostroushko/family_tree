@@ -8,4 +8,4 @@
     <h2 class="col-10 text-center"><b><%= t('.not_found') %></b></h2>
   <% end %>
 </div>
-<%= paginate @users %>
+<%= paginate @users, cache: true %>

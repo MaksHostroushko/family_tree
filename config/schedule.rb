@@ -13,9 +13,9 @@
 #   rake "some:great:rake:task"
 # end
 #
-every 1.days do
+every 7.days, at: '12pm' do
   # runner "Rails.cache.clear"
-  # rake "tmp:cache:clear"
+  rake "tmp:cache:clear"
 end
 
 # Learn more: http://github.com/javan/whenever
