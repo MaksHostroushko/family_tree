@@ -27,6 +27,8 @@
             <!-- <li class="nav-item"> -->
               <!-- <div class='row'> -->
             </ul>
+            <div class="row col-xs-4 ">
+
               <span class="<%= 'locale' if I18n.locale == :en %>"><%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'nav-link' %></span>
 
               <span class="<%= 'locale' if I18n.locale == :ua %>"><%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'nav-link' %></span>
@@ -60,5 +62,6 @@
 
       <span class="<%= 'locale' if I18n.locale == :ua %>"><%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'img_locales_2' %></span>
     <% end %>
+  </div>
   </div>
 </nav>
