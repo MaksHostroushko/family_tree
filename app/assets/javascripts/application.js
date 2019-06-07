@@ -32,5 +32,3 @@
 $(document).on('turbolinks:load', function() {
     lightbox.init();
 });
-
-alert(window.screen.availWidth);

@@ -12,4 +12,8 @@ class Relative < ApplicationRecord
   mount_uploaders :images, ImageUploader
 
   paginates_per 12
+
+  def to_param
+    "#{id}-#{first_name.parameterize}-#{second_name.parameterize}"
+  end
 end

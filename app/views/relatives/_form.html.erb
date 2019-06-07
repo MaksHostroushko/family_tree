@@ -45,7 +45,7 @@
     <br>
 
     <div class="form-group">
-      <%= link_to t(".show"), nil, class: 'button-show-categories btn btn-info', remote: true %>
+      <%= link_to t(".show"), nil, class: 'button-show-categories btn btn-info', remote: true if @user.categories.present? %>
     </div>
 
     <div class="form-group category_group form-collaborators" id="relatives_category_id" >
