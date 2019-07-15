@@ -1,3 +1,4 @@
+<% provide(:title, "#{t('.edit')} | #{@user.name} #{@user.second_name if @user.second_name.present?}") %>
 <h2 class="text-center"><%= t('.edit') %></h2>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/errors' %>
@@ -30,6 +31,30 @@
       <div class="form-group">
         <%= f.label :image %>
         <%= f.file_field :image %>
+      </div>
+
+      <div class="form-group">
+        <%= f.collection_check_boxes(:collaborators, (User.all - [current_user]), :id, :full_name) do |b| %>
+          <%= b.check_box %>
+          <%= b.label %>
+        <% end %>
+        <%= link_to t('.show_collab'), nil, id: 'btn_collab', class: 'btn btn-danger', remote: true %>
+      </div>
+
+      <div class="form-group form-collaborators" id="form-all-collab">
+        <% if @collaborators.present? %>
+          <% @collaborators.each do |c| %>
+            <% user = User.find(c) %>
+
+            <%= link_to user_path(c) do %>
+              <%= user.name %>
+              <%= user.second_name if user.second_name.present? %>
+            <% end %>
+            <br>
+          <% end %>
+        <% else %>
+          <h5><%= t('.toggle_collab') %></h5>
+        <% end %>
       </div>
 
       <div class="btn-form">

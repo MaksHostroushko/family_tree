@@ -1,25 +1,24 @@
-<% if logged_in? %>
+<% if user_signed_in? %>
   <div class="row">
-    <div class="col-md-2.5">
+    <div class="col-md-2">
       <% if @user.categories.present? %>
-        <%= render 'categories_index' %>
+        <%= render 'categories_index', cache: true %>
       <% else %>
       <div class="categ_text">
-        <%= t('.no_categ') %>
+        <span class=""><%= t('.no_categ') %></span>
       </div>
-        <!-- <br> -->
-        <%= link_to "New", new_category_path, class: 'btn btn-danger btn-sm categ_btn' %>
+        <%= link_to t(".pedig_btn"), new_category_path, class: 'btn btn-danger btn-sm categ_btn' %>
       <% end %>
     </div>
-    <div class="users_main col-md-8.5 row">
+    <div class="users_main col-md-10 row">
         <% if @user.relatives.present? %>
-          <%= render @relatives %>
+          <%= render @relatives, cache: true %>
         <% else %>
           <h2 class="col-10 text-center relat_text"><b><%= t('.text') %></b></h2>
         <% end %>
     </div>
   </div>
-  <%= paginate @relatives %>
+  <%= paginate @relatives, cache: true %>
 <% else %>
-  <%= render template: 'devise/sessions/new' %>
+  <%= render template: 'users/sessions/new' %>
 <% end %>

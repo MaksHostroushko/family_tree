@@ -1,0 +1,20 @@
+<%= form_for @email do |f| %>
+<%= render "shared/email_errors", object: @email %>
+
+<div class="col-lg-6 center-block form_create">
+  <br>
+
+  <h5><%= t(".text") %></h5>
+
+  <br>
+
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.trix_editor :body, class: 'form-control-custom' %>
+  </div>
+
+  <div class="text-center">
+    <%= f.submit t(".submit"), class: 'btn btn-success' %>
+  </div>
+</div>
+<% end %>

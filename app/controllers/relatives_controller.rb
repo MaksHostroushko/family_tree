@@ -1,19 +1,20 @@
 class RelativesController < ApplicationController
   before_action :find_relative, only: [:show, :edit, :update, :destroy]
   before_action :correct_user,   only: [:destroy, :edit, :update]
+  # caches_action :index
 
   def index
     @categories = Category.all
     @user = current_user
-    @relatives = @user.relatives.order(:first_name).page(params[:page]) if @user.present?
+    @relatives = @user.relatives.order(created_at: :desc).page(params[:page]) if @user.present?
     @relatives = @relatives.where(id: CategoryRelative.where(category_id: params[:filter]).pluck(:relative_id)).page(params[:page]) if params[:filter].present?
-    @relatives = Relative.search(params[:search]).order(created_at: :asc).page(params[:page]) if params[:search]
-
-    respond_to do |format|
-      format.html
-      # format.js
-      format.json { render json: @relatives.pluck(:first_name) } if @user.present?
-    end
+    # @relatives = Relative.search(params[:search]).order(created_at: :asc).page(params[:page]) if params[:search]
+    #
+    # respond_to do |format|
+    #   format.html
+    #   # format.js
+    #   format.json { render json: @relatives.pluck(:first_name) } if @relatives.present?
+    # end
   end
 
   def new
@@ -29,7 +30,6 @@ class RelativesController < ApplicationController
       flash[:success] = t('.save')
     else
       render 'new'
-      # flash[:danger] = "Sorry,problem"
     end
   end
 

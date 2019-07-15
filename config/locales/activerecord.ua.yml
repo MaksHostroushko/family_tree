@@ -23,6 +23,11 @@ ua:
         image: 'Зображення'
         password: 'Пароль*'
         password_confirmation: 'Підтвердження*'
+        current_password: Поточний пароль
+      categories:
+        name: "Ім'я*"
+      email:
+        body: Повідомлення
   errors:
     format: "%{attribute} %{message}"
     messages:
@@ -73,7 +78,7 @@ ua:
     #Controllers
   relatives:
     create:
-      save: 'Cтворено.Після перевірки адміна стаття буде опублікована'
+      save: 'Статтю успішно створено і опубліковано'
     update:
       edit: 'Інформацію оновлено'
     destroy:
@@ -93,3 +98,7 @@ ua:
       edit: 'Категорію оновлено'
     destroy:
       delete: 'Категорію видалено'
+  emails:
+    create:
+      flash_success: Повідомлення відправлено. Ми відповімо Вам у найближчий час.
+      flash_danger: Повідомлення не відправлено.  

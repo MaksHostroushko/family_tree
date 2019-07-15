@@ -7,17 +7,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no" />
   </head>
 
   <body>
+    <div class="">
+      <%= render 'layouts/navbar' %>
 
-    <%= render 'layouts/navbar' %>
+      <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= "#{name}" %>">
+          <a href="#" class="close" data-dismiss="alert" &#215;></a>
+          <a href="#" class="close" data-dismiss="alert">&#215;</a>
+          <%= content_tag :div, msg, id: "flash_#{name}" if msg.is_a?(String) %>
+        </div>
+      <% end %>
 
-    <% flash.each do |key, value| %>
-      <div id='flash' class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
 
-    <%= yield %>
-    <%#= render 'layouts/footer' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>

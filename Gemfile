@@ -20,6 +20,14 @@ gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
 gem 'local_time'
 gem 'kaminari'
 gem 'faker'
+gem 'bootstrap-datepicker-rails'
+gem 'activerecord-pick'
+gem 'actionpack-action_caching'
+gem 'whenever', require: false
+gem 'omniauth-facebook'
+gem 'figaro'
+gem 'sluggi'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'

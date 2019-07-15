@@ -1,0 +1,13 @@
+<h1 class="text-center"><%= @user.full_name %></h1>
+<%#= link_to "view my profile", @user %>
+<h4 class="text-center"><%= t('.my_collab') %></h4>
+
+<div class="users_main col-md-10 row">
+  <% if @users.present? %>
+    <%= render @users, cache: true %>
+  <% else %>
+    <div class="show-follow-text">
+      <h3><%= t('.no_collab') %></h3>
+    </div>
+  <% end %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_09_093548) do
+ActiveRecord::Schema.define(version: 2019_05_23_101701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 2019_03_09_093548) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.bigint "relative_id"
+    t.bigint "user_id"
     t.index ["relative_id"], name: "index_categories_on_relative_id"
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
@@ -60,13 +60,29 @@ ActiveRecord::Schema.define(version: 2019_03_09_093548) do
     t.index ["relative_id"], name: "index_category_relatives_on_relative_id"
   end
 
-  create_table "collaborations", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "relative_id"
+  create_table "emails", force: :cascade do |t|
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["relative_id"], name: "index_collaborations_on_relative_id"
-    t.index ["user_id"], name: "index_collaborations_on_user_id"
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_pages_on_slug", unique: true
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followed_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followed_id"], name: "index_relationships_on_followed_id"
+    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
+    t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
   create_table "relatives", force: :cascade do |t|
@@ -76,7 +92,7 @@ ActiveRecord::Schema.define(version: 2019_03_09_093548) do
     t.string "born"
     t.text "description"
     t.string "image"
-    t.boolean "published", default: false
+    t.boolean "published", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "family_status"
@@ -86,24 +102,44 @@ ActiveRecord::Schema.define(version: 2019_03_09_093548) do
     t.index ["user_id"], name: "index_relatives_on_user_id"
   end
 
+  create_table "slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", null: false
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type"], name: "index_slugs_on_slug_and_sluggable_type", unique: true
+    t.index ["sluggable_id"], name: "index_slugs_on_sluggable_id"
+  end
+
+  create_table "socials", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "name"
+    t.string "second_name"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
+    t.string "image"
+    t.string "collaborators", default: [], array: true
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "categories", "relatives"
+  add_foreign_key "categories", "users"
   add_foreign_key "category_relatives", "categories"
   add_foreign_key "category_relatives", "relatives"
-  add_foreign_key "collaborations", "users"
-  add_foreign_key "collaborations", "relatives"
   add_foreign_key "relatives", "users"
-  add_foreign_key "collaborations", "relatives"
 end

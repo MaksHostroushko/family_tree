@@ -14,10 +14,9 @@
         <% end %>
       <h2><%#= sanitize relative.description.truncate(15) %></h2>
     </div>
-    <%# if current_user?(relative.user) %>
-    <% if current_user?(relative.user) || current_user.collaboration?(relative) %>
+      <%= link_to t('.delete'), relative, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' if current_user?(relative.user) %>
+    <% if current_user?(relative.user) || relative.user.following?(current_user) %>
       <%= link_to t('.edit'), edit_relative_path(relative), class: 'btn btn-warning btn-sm' %>
-      <%= link_to t('.delete'), relative, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
     <% end %>
   </div>
 <% end %>

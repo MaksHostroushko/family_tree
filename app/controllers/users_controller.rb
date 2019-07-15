@@ -1,39 +1,44 @@
 class UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit]
-  # before_action :logged_in_user, only: [:edit, :update]
-  # before_action :correct_user,   only: [:edit, :update]
+  # caches_action :index
+
+  def new; end
+
+  def formatted_email
+    "#{@name} <#{@email}>"
+  end
 
   def index
     @users = User.order(:name).page(params[:page])
     @user = current_user
-  end
+    @users = User.search(params[:search]).order(created_at: :asc).page(params[:page]) if params[:search]
 
-  def new
-    @user = User.new
-  end
-
-  def show
-    @relatives = @user.relatives
-  end
-
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      log_in @user
-      flash[:success] = t(".welcome") + ", " + "#{@user.name}"
-      UserMailer.send_mail_to_user(@user).deliver_now!
-      UserMailer.send_mail_to_admin(@user).deliver_now!
-      redirect_to root_path
-    else
-      render 'new'
+    respond_to do |format|
+      format.html
+      # format.js
+      format.json { render json: @users.pluck(:second_name) } if @users.present?
     end
   end
 
-  def edit; end
+  def show
+    @relatives = @user.relatives.page(params[:page])
+  end
+
+  def edit
+    @collaborators = @user.collaborators
+    # debugger
+  end
 
   def update
-    @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+    @user = current_user
+
+    if params.dig(:user, :collaborators).present?
+      user_params = { collaborators: params.dig(:user, :collaborators)[1..-1] }
+    end
+
+    if @user.update!(user_params)
+      sign_in @user
+      # flash[:success] = "#{@user.collaborators}"
       flash[:success] = t('.edit')
       redirect_to root_path
     else
@@ -41,22 +46,36 @@ class UsersController < ApplicationController
     end
   end
 
-    def add_collaborator
-      @user = current_user
-      # @user = current_user.collaborators.push
-    end
+  def add_collaborator
+    @user = current_user
+    @users = @user.following
+  end
+
+  def collaborators
+    @user = current_user
+    @collaborators = @user.collaborators
+    @users = @user.following
+  end
+
+  def following
+    @title = t(".following")
+    @user = User.find(params[:id])
+    @users = @user.following
+    render 'show_follow'
+  end
+
+  def followers
+    @title = t(".followers")
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follow'
+  end
+
   private
 
   def user_params
-    if params[:collaborator_ids].present?
-      # debugger
-      # params[:collaborator_ids].map { |e| e  }
-      params.require(:user).permit(:name, :second_name, :email, :password, :password_confirmation, :image, :collaborator_ids, :collaborators)
-
-    else
-     params.require(:user).permit(:name, :second_name, :email, :password, :password_confirmation, :image, :locale, :collaborators)
-    end
-   end
+    params.require(:user).permit(:name, :second_name, :email, :password, :password_confirmation, :image, :collaborators)
+  end
 
    def find_user
      @user = User.find(params[:id])

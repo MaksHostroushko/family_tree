@@ -1,0 +1,17 @@
+ua:
+  views:
+    pagination:
+      first: "&laquo; Перша"
+      last: "Остання &raquo;"
+      previous: "&lsaquo; Попер."
+      next: "Наступна &rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "%{entry_name.capitalize} не знайдено"
+          one: "Відображення <b>1</b> %{entry_name}"
+          other: "Відображення <b>все %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Відображення %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> із <b>%{total}</b> всього"

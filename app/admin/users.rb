@@ -9,9 +9,7 @@ form title: 'A custom title' do |f|
       input :email
       input :second_name
       input :password
-      input :collaborators, as: :check_boxes, collection: User.all.map { |c| [c.name, c.id] }
-      # input :categories, as: :check_boxes, collection: Category.all.map { |c| [c.name, c.id] }
-      input :image, as: :file#, input_html: { multiple: true }
+      input :image, as: :file
     end
     actions
   end
@@ -21,7 +19,6 @@ form title: 'A custom title' do |f|
     column :name
     column :email
     column :second_name
-    column :collaborators
     column :created_at
     column :updated_at
     actions
@@ -32,7 +29,6 @@ form title: 'A custom title' do |f|
       row :name
       row :email
       row :second_name
-      row :collaborators
       row :image do
         div do
           if user.image.present?
@@ -48,7 +44,5 @@ form title: 'A custom title' do |f|
       row :created_at
       row :updated_at
     end
-    # active_admin_comments
-end
-
+  end
 end

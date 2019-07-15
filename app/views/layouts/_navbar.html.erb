@@ -8,12 +8,12 @@
     <ul class="navbar-nav mr-auto">
       <!-- <li class="nav-item active"> -->
         <!-- <div class="col-md-9 row"> -->
-          <% if logged_in? %>
+          <% if user_signed_in? %>
             <%= link_to t('.all_rel'), root_path, class: 'navbar_link'%>
             <%= link_to t('.new_rel'), new_relative_path, class: 'navbar_link' %>
-            <%= link_to t('.all_us'), users_path, class: 'navbar_link'  %>
+            <%= link_to t('.all_us'), users_path, class: 'navbar_link navbar-link-all-users'  %>
           <!-- </li> -->
-            <%= form_tag relatives_path, method: :get, class: "form-inline my-2 my-lg-0 search_form" do %>
+            <%= form_tag users_path, method: :get, class: "form-inline my-4 my-lg-0 search_form" do %>
             <%= text_field_tag(
             :search,
             params[:search],
@@ -26,39 +26,42 @@
           <% end %>
             <!-- <li class="nav-item"> -->
               <!-- <div class='row'> -->
+            </ul>
+            <div class="row col-xs-4 ">
+
               <span class="<%= 'locale' if I18n.locale == :en %>"><%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'nav-link' %></span>
 
               <span class="<%= 'locale' if I18n.locale == :ua %>"><%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'nav-link' %></span>
               <!-- </div> -->
             <!-- </li> -->
       <!-- </div> -->
-    </ul>
 
     <span class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle nav_name" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class=''><%#= @user.name if @user.name.present? %> User_name</span>
+      <a class="nav-link dropdown-toggle nav_name nav_name_2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class=''><%= current_user.name || "User" %></span>
       </a>
       <div class="dropdown-menu col-sm" aria-labelledby="dropdownMenuButton">
-        <%= link_to t('.settings'), edit_user_path(current_user), class: "dropdown-item nav_nav" %>
+        <%= link_to t('.settings'), edit_user_registration_path, class: "dropdown-item nav_nav" %>
+        <%= link_to t(".collabs"), collaborators_path, class: "dropdown-item" %>
         <hr>
-        <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-        <%= link_to "Collaborators", collaborators_new_path, class: "dropdown-item" %>
+        <%= link_to t('.logout'),  destroy_user_session_path, method: :delete, class: "dropdown-item" %>
       </div>
     </span>
 
-      <% if @user.image.url.present? %>
-        <%= link_to(image_tag(@user.image.mini.url, width:50, alt: "Img"), edit_user_path(current_user)) %>
+      <% if current_user.image.url.present? %>
+        <%= link_to(image_tag(current_user.image.mini.url, width:50, alt: "Img", class: 'user-image-navbar'), edit_user_registration_path) %>
       <% else %>
-        <%= link_to(image_tag('empty.png', width: 50), edit_user_path(current_user)) %>
+        <%= link_to(image_tag('empty.png', width: 50, class: 'user-image-navbar'), edit_user_registration_path) %>
       <% end %>
 
     <% elsif %>
-      <%= link_to t('.login'), new_user_session_path, class: 'navbar_link_1' %>
+      <%= link_to t('.login'), user_session_path, class: 'navbar_link_1' %>
       <%= link_to t('.signup'), new_user_registration_path, class: 'navbar_link_2' %>
 
       <span class="<%= 'locale' if I18n.locale == :en %>"><%= link_to image_tag('ukr.jpg', width: 50), { locale: :ua }, class: 'img_locales' %></span>
 
       <span class="<%= 'locale' if I18n.locale == :ua %>"><%= link_to image_tag('usa.png', width: 50), { locale: :en }, class: 'img_locales_2' %></span>
     <% end %>
+  </div>
   </div>
 </nav>

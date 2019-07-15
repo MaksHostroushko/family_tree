@@ -1,1 +1,15 @@
-<%= render 'collaborators' %>
+
+<%= form_with model: @user, local: true do |f| %>
+  <%= render "shared/errors", object: @user %>
+
+  <div class="form-group category_group">
+    <%# (User.all - [current_user]).each do |c| %>
+      <%#= f.label :collaborator_name,  c.name %>
+      <%#= f.check_box "collaborator_ids[]", value: c.id %>
+      <%= f.collection_check_boxes(:collaborators, User.all, :id, :full_name) %>
+
+    <%# end %>
+  </div>
+  <%= f.submit %>
+
+  <% end %>

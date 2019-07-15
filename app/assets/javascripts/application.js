@@ -19,8 +19,12 @@
 //= require turbolinks
 //= require lightbox
 //= require trix
-//= require flash
 //= require search
+//= require flash
+//= require collaborators
+//= require zoom
+//= require footer
+//= require relatives
 //= require local-time
 
 $(document).on('turbolinks:load', function() {

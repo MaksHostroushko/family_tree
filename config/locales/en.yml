@@ -3,30 +3,35 @@ en:
     navbar:
       all_rel: 'All relative'
       new_rel: 'New relative'
-      search: 'Search'
+      search: 'e.g: Shevchenko'
       profile: 'Profile'
       settings: 'Settings'
       logout: 'Log out'
       login: 'Log in'
       signup: 'Sign up'
       all_us: 'All users'
+      collabs: Collaborators
   relatives:
     categories_index:
       find: 'Find'
       new: 'New family'
     form:
       submit: 'Ready'
+      show: Show categories
     index:
-      text: 'No people'
-      no_categ: 'No categories'
+      text: 'Start filling out your family information right now'
+      no_categ: 'Pedigrees have not yet been created'
+      pedig_btn: 'New pedigree'
     relative:
       edit: 'Edit'
       delete: 'Delete'
+    new_relat: 'New relative'
   users:
     edit:
       edit: 'Edit'
       save: 'Save changes'
       e_pass: 'minimum 6 symbols'
+      show_collab: 'Show my collaborators'
     new:
       signup: 'Sign up'
       label_text: 'Example: Oleg'
@@ -36,17 +41,62 @@ en:
       new_ac: 'Create new account'
     index:
       text: 'All users'
-  sessions:
-    login:
-      login: 'Log in'
-      new_user: 'New user?'
-      signup: 'Sign up now!'
-      email: 'Email'
-      password: 'Password'
-      remember: 'Remember me'
+      not_found: Sorry, not found anybody
+    sessions:
+      new:
+        login: 'Log in'
+        remember: 'Remember me'
+        # new_user: 'New user?'
+        # signup: 'Sign up now!'
+        # email: 'Email'
+        # password: 'Password'
+    shared:
+      links:
+        login: 'Log in'
+        signup: 'Sign up'
+        forgot: 'Forgot your password?'
+        confirm_inform: "Didn't receive confirmation instructions?"
+        unlock_inf: "Didn't receive unlock instructions?"
+      stats:
+        following: following
+        followers: followers
+    registrations:
+      new:
+        signup: 'Sign up'
+        signup_btn: 'Sign up'
+      edit:
+        toggle_collab: "You don't have collaborators yet"
+        edit: Edit user account
+        acc_set: Account Settings
+        e_pass: characters minimum
+        text: we need your current password to confirm your changes
+        change: leave blank if you don't want to change it
+        update: Update
+    passwords:
+      new:
+        forgot: 'Forgot your password?'
+        reset_instr: 'Send me reset password instructions'
+    mailer:
+      reset_password_instructions:
+        hello: 'Hello'
+        text_one: 'Someone has requested a link to change your password. You can do this through the link below.'
+        text_two: "If you didn't request this, please ignore this email."
+        text_three: "Your password won't change until you access the link above and create a new one."
+        btn_reset: 'Change my password'
+    show:
+      text: 'User not filling information about own family yet'
+    follow:
+      add_follow: Add to collaborate
+    unfollow:
+      rmv_follow: Remove from collaborators
+    collaborators:
+      empty_collab: User not have collaborators yet
+    show_follow:
+      my_collab: My collaborators
+      no_collab: Sorry, but nobody not added you to collaborators
   categories:
     new:
-      .new_cat: 'New Category'
+      new_cat: 'New Category'
     form:
       create: 'Create category'
   shared:
@@ -56,6 +106,19 @@ en:
     error_messages:
       er_text: 'The form contains'
       er: 'errors'
+  user_mailer:
+    send_mail_to_admin:
+      user: 'New user'
+      text: You have a new email
+      from: From
+      body: body
+    send_mail_to_user:
+      welcome: 'Welcome to TreeFamily'
+      create: 'Create your family tree with enjoy'
+  emails:
+    new:
+      text: If you have some problems or questions about site - writing and send this message.
+      submit: Send email
   time:
    formats:
       long: "%Y-%m-%d %H:%M:%S"

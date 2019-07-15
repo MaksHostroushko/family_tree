@@ -1,19 +1,35 @@
-<hr>
 <footer class="footer">
+  <hr>
   <div class="container-fluid text-center">
     <div class="row">
       <div class="mr-auto">
-
       </div>
 
       <div class="mr-auto">
-
       </div>
 
-      <div class="float-right">
+      <div class="col-md-4">
+        <% @pages.each do |page| %>
+          <% cache(page) do %>
+            <%== link_to page.title, page_path(page) %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="col-md-4">
+        <% @socials.each do |social| %>
+          <% cache(social) do %>
+            <%= link_to social.body, target: "_blank" do %>
+              <%= image_tag "#{social.image.mini.url}" if social.image.present? %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="float-right col-md-4">
         <%= image_tag 'facebook.jpg', width: 100 %>
         <br>
-        <p>© 2019 <b>Find it!</b></p>
+        <span class="copyright"> Copyright &copy; <%= copyright_notice_year_range(2019) %> Family Tree - All rights reserved </span>
       </div>
     </div>
   </div>

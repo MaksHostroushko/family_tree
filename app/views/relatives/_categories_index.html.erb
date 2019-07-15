@@ -2,16 +2,19 @@
   <%= form_tag relatives_path, method: :get do %>
   <ul class="category">
         <% @user.categories.each do |category| %>
-        <li>
-          <%= check_box_tag "filter[]", category.id, params[:filter] ? params[:filter].include?(category.id.to_s) : false, id: "cb#{category.id}", remote: true %>
+          <% cache(category) do %>
+            <li>
+              <%= check_box_tag "filter[]", category.id, params[:filter] ? params[:filter].include?(category.id.to_s) : false, id: "cb#{category.id}", remote: true %>
 
-          <label for="cb<%= category.id %>"><%= category.name %></label>
+              <label for="cb<%= category.id %>"><%= category.name %></label>
 
-          <b class=''>(<%= category.relatives.count %>)</b>
-        </li>
+              <!-- <b class=''>(<%#= category.relatives.where(published: true).count %>)</b> -->
+            </li>
+          <% end %>
         <% end %>
       </ul>
-      <%= submit_tag t('.find'), class: 'btn btn-success btn_category btn-sm' if @categories.present? %>
-      <%= link_to t('.new'), new_category_path, class: 'btn btn-danger btn-sm' %>
+      <%= submit_tag t('.find'), class: 'btn btn-success btn-category btn-sm' if @categories.present? %>
+      <br>
+      <%= link_to t('.new'), new_category_path, class: 'btn btn-category-2 btn-danger btn-sm' %>
   <% end %>
   </div>
