@@ -20,14 +20,12 @@ gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
 gem 'local_time'
 gem 'kaminari'
 gem 'faker'
-gem 'bootstrap-datepicker-rails'
 gem 'activerecord-pick'
 gem 'actionpack-action_caching'
 gem 'whenever', require: false
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'sluggi'
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -75,6 +73,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'bootstrap-datepicker-rails'
 end
 
 group :test do
