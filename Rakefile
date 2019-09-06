@@ -169,20 +169,20 @@ end
 namespace :db do
   namespace :mysql do
     connection_arguments = lambda do |connection_name|
-      config = ARTest.config["connections"]["mysql2"][connection_name]
+      config = Test.config["connections"]["mysql2"][connection_name]
       ["--user=#{config["username"]}", "--password=#{config["password"]}", ("--host=#{config["host"]}" if config["host"])].join(" ")
     end
 
     desc "Build the MySQL test databases"
     task :build do
-      config = ARTest.config["connections"]["mysql2"]
+      config = Test.config["connections"]["mysql2"]
       %x( mysql #{connection_arguments["arunit"]} -e "create DATABASE #{config["arunit"]["database"]} DEFAULT CHARACTER SET utf8mb4" )
       %x( mysql #{connection_arguments["arunit2"]} -e "create DATABASE #{config["arunit2"]["database"]} DEFAULT CHARACTER SET utf8mb4" )
     end
 
     desc "Drop the MySQL test databases"
     task :drop do
-      config = ARTest.config["connections"]["mysql2"]
+      config = Test.config["connections"]["mysql2"]
       %x( mysqladmin #{connection_arguments["arunit"]} -f drop #{config["arunit"]["database"]} )
       %x( mysqladmin #{connection_arguments["arunit2"]} -f drop #{config["arunit2"]["database"]} )
     end
@@ -194,14 +194,14 @@ namespace :db do
   namespace :postgresql do
     desc "Build the PostgreSQL test databases"
     task :build do
-      config = ARTest.config["connections"]["postgresql"]
+      config = Test.config["connections"]["postgresql"]
       %x( createdb -E UTF8 -T template0 #{config["arunit"]["database"]} )
       %x( createdb -E UTF8 -T template0 #{config["arunit2"]["database"]} )
     end
 
     desc "Drop the PostgreSQL test databases"
     task :drop do
-      config = ARTest.config["connections"]["postgresql"]
+      config = Test.config["connections"]["postgresql"]
       %x( dropdb #{config["arunit"]["database"]} )
       %x( dropdb #{config["arunit2"]["database"]} )
     end
